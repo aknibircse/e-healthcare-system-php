@@ -69,7 +69,7 @@ include("dbconnection.php");
             <div class="info-box-4 hover-zoom-effect">
             <div class="icon"> <i class="zmdi zmdi-money col-green"></i> </div>
                 <div class="content">
-                    <div class="text">Hospital Earning</div>
+                    <div class="text">Service Earnings</div>
                     <div class="number"> 
                         <?php 
               $sql = "SELECT sum(bill_amount) as total  FROM `billing_records` ";
