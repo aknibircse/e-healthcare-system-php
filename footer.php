@@ -16,15 +16,16 @@
         <div class="col-sm-5">
           <div class="con-info">
             <h6>Contact Us</h6>
-            <p>Daffodil Smart City, Ashulia, Dhaka.</p>
+            <p>Daffodil Smart City, Ashulia, Savar, Dhaka.</p>
             <ul>
               <li class="mobile">
-                <p>+880 1755-221940</p>
-                <p>+880 1792-928096</p>
+                <p> +880 1628236296 <br>
+                +880 1750490791</p>
               </li>
               <li class="email">
-                <p>zahid15-11280@diu.edu.bd</p>
-                <p>mobarok15-1554@diu.edu.bd</p></li>
+                <p>taslima15-2561@diu.edu.bd <br>
+                taslima2561.cse@gmail.com</p>
+                </li>
             </ul>
           </div>
         </div>

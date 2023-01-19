@@ -65,12 +65,13 @@ $tim = date("H:i:s");
       <div class="head-info">
         <ul>
           <li> <i class="fa fa-phone"></i>
-            <p>+880 1755-221940<br>
-            +880 1792-928096</p>
+            <p>+880 1628236296<br>
+            +880 1750490791</p>
           </li>
           <li> <i class="fa fa-envelope-o"></i>
-            <p>zahid15-11280@diu.edu.bd<br>
-            mobarok15-1554@diu.edu.bd</p>
+            <p>taslima15-2651@diu.edu.bd <br>
+               taslima2561.cse@gmail.com
+          </p>
           </li>
           <li> <i class="fa fa-map-marker"></i>
             <p>Daffodil Smart City<br>

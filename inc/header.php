@@ -78,8 +78,8 @@
               info@cnc.com</p>
           </li>
           <li> <i class="fa fa-map-marker"></i>
-            <p>Zigatola, Dhanmondi <br>
-             Dhaka</p>
+            <p>Daffodil Smart City<br>
+             Ashulia, Savar, Dhaka</p>
           </li>
         </ul>
       </div>
