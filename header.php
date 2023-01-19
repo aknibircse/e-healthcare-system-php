@@ -11,11 +11,11 @@ $tim = date("H:i:s");
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="author" content="M_Adnan" />
 <!-- Document Title -->
-<title>HMS</title>
+<title>E-Healthcare System</title>
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<!--<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">-->
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
 <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
@@ -61,7 +61,7 @@ $tim = date("H:i:s");
   <!-- Header -->
   <header class="header-style-2">
     <div class="container">
-      <div class="logo"> <a href="index.php"><img src="images/hmslogo.png" alt="" style="height: 51px;"></a> </div>
+      <div class="logo"> <a href="index.php"><img src="images/HMSlogo.png" alt="" style="height: 51px;"></a> </div>
       <div class="head-info">
         <ul>
           <li> <i class="fa fa-phone"></i>
@@ -75,7 +75,7 @@ $tim = date("H:i:s");
           </li>
           <li> <i class="fa fa-map-marker"></i>
             <p>Daffodil Smart City<br>
-             Ashulia, Dhaka</p>
+             Ashulia, Savar, Dhaka</p>
           </li>
         </ul>
       </div>

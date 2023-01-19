@@ -468,7 +468,7 @@ section {
 }
 
 .home-simple {
-    background: url(../images/hms3.jpg) center center no-repeat;
+    background: url(../images/HMS3.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -535,12 +535,12 @@ section {
 }
 
 .home-slide .slide-img-1 {
-    background: url(../images/hms2.jpg) center center no-repeat;
+    background: url(../images/HMS2.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .home-slide .slide-img-2 {
-    background: url(../images/hms3.jpg) center center no-repeat;
+    background: url(../images/HMS3.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -1250,7 +1250,7 @@ header .is-sticky .sticky .logo {
 
 .slider-simple {
     height: 680px;
-    background: url(../images/hms.jpg) center right no-repeat;
+    background: url(../images/HMS.jpg) center right no-repeat;
     background-size: cover;
     margin-top: 100px;
 }

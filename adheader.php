@@ -11,8 +11,8 @@ $tim = date("H:i:s");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>HMS - Admin</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>EHS - Admin</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
     <link href="assets/plugins/morrisjs/morris.css" rel="stylesheet" />
@@ -58,7 +58,7 @@ $tim = date("H:i:s");
                 <!-- Notifications -->
                 <li>
                     <a data-placement="bottom" title="Full Screen" href="logout.php"><i
-                            class="zmdi zmdi-sign-in"></i></a>
+                            class="zmdi zmdi-sign-in"></i>&nbsp;<span>Logout</span></a>
                 </li>               
 
             </ul>

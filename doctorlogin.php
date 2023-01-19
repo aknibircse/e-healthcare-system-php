@@ -36,10 +36,10 @@ if(isset($_POST['submit']))
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<title>HMS - Admin</title>
+<title>EHS - Doctor Log In</title>
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 <!-- Custom Css -->
 <link href="assets/css/main.css" rel="stylesheet">
 <link href="assets/css/login.css" rel="stylesheet">

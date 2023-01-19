@@ -18,7 +18,7 @@ $tim = date("H:i:s");
 <title>Hospital Admin</title>
 <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
 <!-- Custom Css -->
 <link href="assets/css/main.css" rel="stylesheet">
 <link href="assets/css/login.css" rel="stylesheet">

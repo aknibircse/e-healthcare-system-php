@@ -17,7 +17,7 @@ SET time_zone = "+06:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ohmsphp`
+-- Database: `oHMSphp`
 --
 
 -- --------------------------------------------------------
