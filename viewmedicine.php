@@ -25,7 +25,7 @@ if(isset($_GET['delid']))
           <thead>
             <tr>
               <th>Name</th>
-              <th>Cost</th>
+              <th>Cost&nbsp;(<i><span style="color: green;">৳</span></i>)</th>
               <th>description</th>
               <th>Status</th>
               <th>Action</th>
@@ -40,7 +40,7 @@ if(isset($_GET['delid']))
             {
               echo "<tr>
               <td>&nbsp;$rs[medicinename]</td>
-              <td>&nbsp;$rs[medicinecost] ৳</td>
+              <td>&nbsp;$rs[medicinecost]</td>
               <td>&nbsp;$rs[description]</td>
               <td>&nbsp;$rs[status]</td>
               <td>&nbsp;

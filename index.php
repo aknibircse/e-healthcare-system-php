@@ -143,7 +143,7 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 6; font-size:40px; color:#000; font-weight:500; white-space: nowrap;"> Welcome To Our Research Center </div>
+                style="z-index: 6; font-size:60px; color:#FFF4AB; font-weight:500; white-space: nowrap;"> Welcome To Our Research Center </div>
             
             <!-- LAYER NR. 3 -->
             <div class="tp-caption sfb tp-resizeme text-center" 
@@ -156,7 +156,7 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#000; max-width: auto; max-height: auto; white-space: nowrap;">We work in a friendly and efficient using the latest <br>
+                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">We work in a friendly and efficient using the latest <br>
               technologies and sharing our expertise.</div>
           </li>
         </ul>
@@ -230,7 +230,7 @@
         <div class="heading-block">
           <h2>Our Services</h2>
           <hr>
-          <span>Our E-healthcare System (HMS) is a comprehensive software solution that helps in streamlining the day-to-day activities of a hospital. It is designed to help healthcare providers, administrators, and healthcare professionals in managing their operations more efficiently. With HMS, hospitals can keep track of patient information, billing and accounts, store medical records, and schedule appointments. It also allows users to access medical reports, track patient vitals, and monitor patient health.</span> </div>
+          <span>Our E-healthcare System (EHS) is a comprehensive software solution that helps in streamlining the day-to-day activities of a hospital. It is designed to help healthcare providers, administrators, and healthcare professionals in managing their operations more efficiently. With HMS, hospitals can keep track of patient information, billing and accounts, store medical records, and schedule appointments. It also allows users to access medical reports, track patient vitals, and monitor patient health.</span> </div>
         
         <!-- Services -->
         <div class="services">
