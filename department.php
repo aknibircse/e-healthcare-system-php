@@ -50,11 +50,11 @@ if(isset($_GET['editid']))
       <tbody>
         <tr>
           <td width="34%">Department Name</td>
-          <td width="66%"><input placeholder=" Enter Here " class="form-control" type="text" name="departmentname" id="departmentname" value="<?php echo $rsedit['departmentname']; ?>" /></td>
+          <td width="66%"><input placeholder="Enter Department Name" class="form-control" type="text" name="departmentname" id="departmentname" value="<?php echo $rsedit['departmentname']; ?>" /></td>
         </tr>
         <tr>
           <td>Description</td>
-          <td><textarea placeholder=" Enter Here " class="form-control no-resize" name="textarea" id="textarea" cols="45" rows="5"><?php echo $rsedit['description'] ; ?></textarea></td>
+          <td><textarea placeholder="Enter Department Description" class="form-control no-resize" name="textarea" id="textarea" cols="45" rows="5"><?php echo $rsedit['description'] ; ?></textarea></td>
         </tr>
         <tr>
           <td>Status</td>

@@ -50,22 +50,22 @@ if(isset($_GET['editid']))
       <tbody>
         <tr>
           <td width="34%">Medicine Name</td>
-          <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinename" id="medicinename" value="<?php echo $rsedit['medicinename']; ?>" /></td>
+          <td width="66%"><input placeholder="Enter Medicine Name" class="form-control" type="text" name="medicinename" id="medicinename" value="<?php echo $rsedit['medicinename']; ?>" /></td>
         </tr>
         <tr>
           <td width="34%">Medicine Cost</td>
-          <td width="66%"><input placeholder="Enter Here" class="form-control" type="text" name="medicinecost" id="medicinecost" value="<?php echo $rsedit['medicinecost']; ?>" /></td>
+          <td width="66%"><input placeholder="Enter Medicine Cost" class="form-control" type="text" name="medicinecost" id="medicinecost" value="<?php echo $rsedit['medicinecost']; ?>" /></td>
         </tr>
         <tr>
           <td>Description</td>
-          <td><textarea placeholder="Enter Here" class="form-control no-resize" name="description" id="description" cols="45" rows="5"><?php echo $rsedit['description'] ; ?></textarea></td>
+          <td><textarea placeholder="Enter Medicine Description" class="form-control no-resize" name="description" id="description" cols="45" rows="5"><?php echo $rsedit['description'] ; ?></textarea></td>
         </tr>
         <tr>
           <td>Status</td>
           <td> <select class="form-control show-tick" name="status" id="status">
             <option value="">Select</option>
             <?php
-		  $arr = array("Active","Inactive");
+		  $arr = array("Available","Out of Stock");
 		  foreach($arr as $val)
 		  {
 			  if($val == $rsedit['status'])
