@@ -98,7 +98,7 @@ if(isset($_GET['editid']))
 
 					<div class="col-sm-4 col-xs-12">
 						<div class="form-group">
-							<label for="" style="color: black; font-size: 18px;">Note</label>
+							<label for="" style="color: black; font-size: 18px;">Treatment Description</label>
 							<div class="form-line">
 								<textarea name="textarea" placeholder="Enter Treatment Description" class="form-control no-resize" id="textarea" cols="45"
 								rows="5"><?php echo $rsedit['note'] ; ?></textarea>
@@ -107,8 +107,8 @@ if(isset($_GET['editid']))
 					</div>
 				</div>
 
-			<div class="col-sm-12">
-				<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-raised" />
+			<div class="col-sm-12" align="center">
+				<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-raised g-bg-cyan" />
 			</div>
 
 				</form>
@@ -120,6 +120,8 @@ if(isset($_GET['editid']))
 <?php
 include("adfooter.php");
 ?>
+
+
 <script type="application/javascript">
 var alphaExp = /^[a-zA-Z]+$/; 												/* Variable to Validate only Alphabets */
 var alphaspaceExp = /^[a-zA-Z\s]+$/; 										/* Variable to Validate only Alphabets and Space */
@@ -128,15 +130,15 @@ var alphanumericExp = /^[0-9a-zA-Z]+$/; 									/* Variable to Validate Numbers
 var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; 		/* Variable to Validate Email ID */
 function validateform() {
 	if (document.frmtreat.treatmenttype.value == "") {
-		alert("Treatment type should not be empty..");
+		alert("Treatment type should not be empty.");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (!document.frmtreat.treatmenttype.value.match(alphaspaceExp)) {
-		alert("Treatment type not valid..");
+		alert("Treatment type not valid.");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (document.frmtreat.select.value == "") {
-		alert("Kindly select the status..");
+		alert("Kindly select the status.");
 		document.frmtreat.select.focus();
 		return false;
 	} else {

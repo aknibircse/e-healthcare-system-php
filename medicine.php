@@ -80,11 +80,14 @@ if(isset($_GET['editid']))
 		  ?>
             </select></td>
         </tr>
-        <tr>
-          <td colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Submit" /></td>
-        </tr>
       </tbody>
     </table>
+	
+	<div class="col-sm-12" align="center">
+				<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-raised g-bg-cyan" />
+	</div>
+
+        
     </form>
     <p>&nbsp;</p>
   </div>

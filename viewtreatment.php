@@ -25,15 +25,15 @@ if(isset($_GET['delid']))
      <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
       <tbody>
         <tr>
-          <td><strong>Treatment Type</strong></td>
-          <td><strong>Cost&nbsp;<i><span style="color: green;">৳</span></i></strong></td>
-          <td><strong>Note</strong></td>
-          <td><strong>Status</strong></td>
+          <td align="center"><strong>Treatment Type</strong></td>
+          <td align="center"><strong>Cost&nbsp;<i><span style="color: green;">৳</span></i></strong></td>
+          <td align="center"><strong>Treatment Description</strong></td>
+          <td align="center"><strong>Status</strong></td>
           <?php
           if(isset($_SESSION['adminid']))
           {
             ?>
-            <td><strong>Action</strong></td>
+            <td align="center"><strong>Action</strong></td>
             <?php
           }
           ?>
@@ -44,15 +44,16 @@ if(isset($_GET['delid']))
         while($rs = mysqli_fetch_array($qsql))
         {
           echo "<tr>
-          <td>&nbsp;$rs[treatmenttype]</td>
-          <td>&nbsp;$rs[treatment_cost]</td>
-          <td>&nbsp;$rs[note]</td>
-          <td>&nbsp;$rs[status]</td>";
+          <td>$rs[treatmenttype]</td>
+          <td>$rs[treatment_cost]</td>
+          <td>$rs[note]</td>
+          <td>$rs[status]</td>";
           if(isset($_SESSION['adminid']))
           {
-            echo "<td>&nbsp;
-            <a href='treatment.php?editid=$rs[treatmentid]' class='btn btn-raised bg-green'>Edit</a> 
-            <a href='viewtreatment.php?delid=$rs[treatmentid]' class='btn btn-raised bg-blush'>Delete</a> </td>";
+            echo "<td align='center'>
+            <a href='treatment.php?editid=$rs[treatmentid]' class='btn btn-raised bg-green'>Edit</a>
+            <a href='viewtreatment.php?delid=$rs[treatmentid]' class='btn btn-raised bg-blush'>Delete</a> 
+            </td>";
           }
           echo "</tr>";
         }
