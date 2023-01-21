@@ -26,7 +26,7 @@ if(isset($_GET['delid']))
       <tbody>
         <tr>
           <td><strong>Treatment Type</strong></td>
-          <td><strong>Cost</strong></td>
+          <td><strong>Cost&nbsp;<i><span style="color: green;">৳</span></i></strong></td>
           <td><strong>Note</strong></td>
           <td><strong>Status</strong></td>
           <?php
@@ -45,7 +45,7 @@ if(isset($_GET['delid']))
         {
           echo "<tr>
           <td>&nbsp;$rs[treatmenttype]</td>
-          <td>&nbsp;$rs[treatment_cost] ৳</td>
+          <td>&nbsp;$rs[treatment_cost]</td>
           <td>&nbsp;$rs[note]</td>
           <td>&nbsp;$rs[status]</td>";
           if(isset($_SESSION['adminid']))

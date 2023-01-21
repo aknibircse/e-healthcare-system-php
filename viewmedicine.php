@@ -25,7 +25,7 @@ if(isset($_GET['delid']))
           <thead>
             <tr>
               <th>Name</th>
-              <th>Cost&nbsp;(<i><span style="color: green;">৳</span></i>)</th>
+              <th>Cost&nbsp;<i><span style="color: green;">৳</span></i></th>
               <th>description</th>
               <th>Status</th>
               <th>Action</th>
