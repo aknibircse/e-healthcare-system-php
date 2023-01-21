@@ -7,7 +7,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('Medicine redcord deleted successfully..');</script>";
+		echo "<script>alert('Medicine Redcord Deleted Successfully.');</script>";
 	}
 }
 ?>
@@ -24,11 +24,11 @@ if(isset($_GET['delid']))
 
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Cost&nbsp;<i><span style="color: green;">৳</span></i></th>
-              <th>description</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th style="text-align:center;">Name</th>
+              <th style="text-align:center;">Cost&nbsp;<i><span style="color: green;">৳</span></i></th>
+              <th style="text-align:center;">Description</th>
+              <th style="text-align:center;">Status</th>
+              <th style="text-align:center;">Action</th>
             </tr>
           </thead> 
           <tbody>
@@ -39,11 +39,11 @@ if(isset($_GET['delid']))
             while($rs = mysqli_fetch_array($qsql))
             {
               echo "<tr>
-              <td>&nbsp;$rs[medicinename]</td>
-              <td>&nbsp;$rs[medicinecost]</td>
-              <td>&nbsp;$rs[description]</td>
-              <td>&nbsp;$rs[status]</td>
-              <td>&nbsp;
+              <td>$rs[medicinename]</td>
+              <td>$rs[medicinecost]</td>
+              <td>$rs[description]</td>
+              <td style='text-align:center;'>$rs[status]</td>
+              <td style='text-align:center;'>&nbsp;
               <a href='medicine.php?editid=$rs[medicineid]' class='btn btn-raised bg-green'>Edit</a> 
               <a href='viewmedicine.php?delid=$rs[medicineid]' class='btn btn-raised bg-blush'>Delete</a></td>
               </tr>";

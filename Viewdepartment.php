@@ -30,14 +30,14 @@ if(isset($_GET['delid']))
      <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
       <tbody>
         <tr>
-          <td><strong>Name</strong></td>
-          <td><strong>Department Description</strong></td>          
-          <td><strong>Status</strong></td>
+          <td style="text-align:center;"><strong>Name</strong></td>
+          <td style="text-align:center;"><strong>Department Description</strong></td>          
+          <td style="text-align:center;"><strong>Status</strong></td>
           <?php
           if(isset($_SESSION['adminid']))
           {
             ?>
-            <td><strong>Action</strong></td>
+            <td style="text-align:center;"><strong>Action</strong></td>
             <?php
           }
           ?>
@@ -49,13 +49,14 @@ if(isset($_GET['delid']))
         {
           echo "<tr>
           <td>$rs[departmentname]</td>
-          <td> $rs[description]</td>
-          
-          <td>&nbsp;$rs[status]</td>";
+          <td> $rs[description]</td>        
+          <td>$rs[status]</td>";
           if(isset($_SESSION['adminid']))
           {
-            echo "<td>&nbsp;
-            <a href='department.php?editid=$rs[departmentid]'>Edit</a> | <a href='viewdepartment.php?delid=$rs[departmentid]'>Delete</a> </td>";
+            echo "<td>
+            <a href='department.php?editid=$rs[departmentid]' class='btn btn-raised bg-green'>Edit</a> 
+            <a href='viewdepartment.php?delid=$rs[departmentid]' class='btn btn-raised bg-blush'>Delete</a> 
+            </td>";
           }
           echo "</tr>";
         }

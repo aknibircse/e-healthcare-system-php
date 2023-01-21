@@ -10,8 +10,8 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE admin SET adminname='$_POST[adminname]',loginid='$_POST[loginid]',status='$_POST[select]' WHERE adminid='$_SESSION[adminid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<div class='alert alert-success'>
-			admin record updated successfully
+			echo "<div class='alert alert-success' style='text-align:center;'>
+			Admin Record Updated Successfully.
 			</div>";
 			
 		}
@@ -25,8 +25,8 @@ if(isset($_POST['submit']))
 		$sql ="INSERT INTO admin(adminname,loginid,status) values('$_POST[adminname]','$_POST[loginid]','$_POST[select]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<div class='alert alert-success'>
-			Administrator record inserted successfully
+			echo "<div class='alert alert-success' style='text-align:center;'>
+			Administrator Record Inserted Successfully.
 			</div>";
 
 		}
@@ -46,7 +46,7 @@ if(isset($_SESSION['adminid']))
 ?>
 <div class="container-fluid">
     <div class="block-header">
-        <h2 class="text-center"> Change Admin Profile</h2>
+        <h2 class="text-center">Change Admin Profile</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -61,7 +61,7 @@ if(isset($_SESSION['adminid']))
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="adminname" id="adminname"
+                                        <input type="text" placeholder="Enter Admin Name" class="form-control" name="adminname" id="adminname"
                                             value="<?php echo $rsedit['adminname']; ?>" />
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ if(isset($_SESSION['adminid']))
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" class="form-control" name="loginid" id="loginid"
+                                        <input type="text" class="form-control" placeholder="Enter Admin's LogIn ID" name="loginid" id="loginid"
                                             value="<?php echo $rsedit['loginid']; ?>" />
                                     </div>
                                 </div>

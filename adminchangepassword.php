@@ -8,21 +8,19 @@ if(isset($_POST['submit']))
 	$qsql= mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<div class='alert alert-success'>
-		 Password updated successfully
-	</div>";
+		echo "<script>window.location.href = 'adminaccount.php';</script>";
+
 	}
 	else
 	{
-		echo "<div class='alert alert-warning'>
-		 admin record update Failed
-	</div>";		
+		echo "<div style='text-align:center;' class='alert alert-warning'>
+		 Admin Record Update Failed.</div>";		
 	}
 }
 ?>
 <div class="container-fluid">
     <div class="block-header">
-        <h2 class="text-center"> Admin's Password</h2>
+        <h2 class="text-center">Admin's Password</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -60,9 +58,8 @@ if(isset($_POST['submit']))
 					</div>
 					</div>                          
 			</div>                     
-			<div class="col-sm-12">
-				<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
-				
+			<div class="col-sm-12" style="text-align: center;">
+			<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
 			</div>
 		</div>
 	</div>
@@ -73,15 +70,17 @@ if(isset($_POST['submit']))
  <div class="clear"></div>
   </div>
 </div>
+
 <?php
 include("adfooter.php");
 ?>
+
 <script type="application/javascript">
 function validateform1()
 {
 	if(document.frmadminchange.oldpassword.value == "")
 	{
-		alert("Old password should not be empty..");
+		alert("Old Password should not be Empty..");
 		document.frmadminchange.oldpassword.focus();
 		return false;
 	}

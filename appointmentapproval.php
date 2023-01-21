@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 				$roomid= $_POST['select3'];
 				$billtype = "Room Rent";
 				include("insertbillingrecord.php");				
-				echo "<script>alert('appointment record updated successfully...');</script>";				
+				echo "<script>alert('Appointment Record Updated Successfully.');</script>";				
 				echo "<script>window.location='patientreport.php?patientid=$_GET[patientid]&appointmentid=$_GET[editid]';</script>";
 			}
 			else

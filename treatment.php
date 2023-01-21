@@ -9,7 +9,10 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE treatment SET treatmenttype='$_POST[treatmenttype]',treatment_cost='$_POST[treatmentcost]',note='$_POST[textarea]',status='$_POST[select]' WHERE treatmentid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Treatment Record Updated Successfully.');</script>";
+			echo "<script>alert('Treatment Record Updated Successfully.');
+			window.location.href = 'viewtreatment.php';
+			</script>";
+
 		}
 		else
 		{
@@ -53,7 +56,7 @@ if(isset($_GET['editid']))
 					<div class="row">
 						<div class="col-sm-4 col-xs-12">
 							<div class="form-group">
-								<label for="type" style="color: black; font-size: 18px;">Treatment Type</label>
+								<label for="type" style="color: black; font-size: 1rem; font-weight: 400;font-family: 'Roboto', Arial, Tahoma, sans-serif;">Treatment Type</label>
 								<div class="form-line">
 								<input type="text" placeholder="Enter Treatment Type" class="form-control" name="treatmenttype" id="treatmenttype" value="<?php echo $rsedit['treatmenttype']; ?>">
 								</div>
@@ -62,7 +65,7 @@ if(isset($_GET['editid']))
 
 						<div class="col-sm-4 col-xs-12">
 							<div class="form-group">
-								<label for="type" style="color: black; font-size: 18px;">Treatment Cost</label>
+								<label for="type" style="color: black; font-size: 1rem; font-weight: 400;font-family: 'Roboto', Arial, Tahoma, sans-serif;">Treatment Cost</label>
 								<div class="form-line">
 									<input type="text" placeholder="Enter Treatment Cost" class="form-control" name="treatmentcost" id="treatmentcost"
 									value="<?php echo $rsedit['treatment_cost']; ?>" />
@@ -72,7 +75,7 @@ if(isset($_GET['editid']))
 
 						<div class="col-sm-4 col-xs-12">
 							<div class="form-group">
-								<label style="color: black; font-size: 18px;">Status</label>
+								<label style="color: black; font-size: 1rem; font-weight: 400;font-family: 'Roboto', Arial, Tahoma, sans-serif;"></label>Status</label>
 								<div class="form-line">
 
 									<select name="select" id="select" class=" form-control show-tick">
@@ -98,7 +101,7 @@ if(isset($_GET['editid']))
 
 					<div class="col-sm-4 col-xs-12">
 						<div class="form-group">
-							<label for="" style="color: black; font-size: 18px;">Treatment Description</label>
+							<label for="" style="color: black; font-size: 1rem; font-weight: 400;font-family: 'Roboto', Arial, Tahoma, sans-serif;">Treatment Description</label>
 							<div class="form-line">
 								<textarea name="textarea" placeholder="Enter Treatment Description" class="form-control no-resize" id="textarea" cols="45"
 								rows="5"><?php echo $rsedit['note'] ; ?></textarea>

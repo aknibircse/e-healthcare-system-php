@@ -8,7 +8,8 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE medicine SET medicinename='$_POST[medicinename]',medicinecost='$_POST[medicinecost]',description='$_POST[description]',status='$_POST[status]' WHERE medicineid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Medicine record updated successfully.');</script>";
+			echo "<script>alert('Medicine Record Updated Successfully.');
+			window.location.href = 'viewmedicine.php';</script>";
 		}
 		else
 		{
@@ -20,7 +21,7 @@ if(isset($_POST['submit']))
 		$sql ="INSERT INTO medicine(medicinename,medicinecost,description,status) values('$_POST[medicinename]','$_POST[medicinecost]','$_POST[description]','$_POST[status]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Medicine record inserted successfully.');</script>";
+			echo "<script>alert('Medicine Record Inserted Successfully.');</script>";
 		}
 		else
 		{
@@ -65,7 +66,7 @@ if(isset($_GET['editid']))
           <td> <select class="form-control show-tick" name="status" id="status">
             <option value="">Select</option>
             <?php
-		  $arr = array("Available","Out of Stock");
+		  $arr = array("Available","Stock Out");
 		  foreach($arr as $val)
 		  {
 			  if($val == $rsedit['status'])
@@ -84,17 +85,14 @@ if(isset($_GET['editid']))
     </table>
 	
 	<div class="col-sm-12" align="center">
-				<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-raised g-bg-cyan" />
-	</div>
-
-        
+		<input type="submit" name="submit" id="submit" value="Submit" class="btn btn-raised g-bg-cyan" />
+	</div>       
     </form>
-    <p>&nbsp;</p>
   </div>
 </div>
 </div>
  <div class="clear"></div>
-  </div>
+</div>
 </div>
 <?php
 include("adfooter.php");
