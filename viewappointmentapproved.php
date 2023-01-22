@@ -7,7 +7,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('appointment record deleted successfully..');</script>";
+		echo "<script>alert('Appointment Record Deleted Successfully.');</script>";
 	}
 }
 if(isset($_GET['approveid']))
@@ -16,7 +16,7 @@ if(isset($_GET['approveid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('Appointment record Approved successfully..');</script>";
+		echo "<script>alert('Appointment Record Approved Successfully.');</script>";
 	}
 }
 ?>
@@ -82,7 +82,7 @@ if(isset($_GET['approveid']))
 						{
 							echo "<a href='appointmentapproval.php?editid=$rs[appointmentid]' class='btn btn-raised g-bg-cyan>Approve</a><hr>";
 						}
-						echo "  <a href='viewappointment.php?delid=$rs[appointmentid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a>";
+						echo "  <a href='viewappointment.php?delid=$rs[appointmentid]' class='btn btn-sm btn-raised g-bg-blush2'>Edit</a>";
 					}
 					else
 					{

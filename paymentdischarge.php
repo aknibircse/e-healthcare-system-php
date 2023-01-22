@@ -47,48 +47,48 @@ $billappointmentid = $_GET['appointmentid'];
         <table class="table table-bordered table-striped">
           <thead>
             <tr>
-              <th colspan="2">Discharge</th>
+              <th colspan="2" style="text-align:center;">Discharge</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Discharge date</td>
+              <td><strong>Discharge Date</strong></td>
               <td><input class="form-control" name="dischargedate" type="text" id="dischargedate" value="<?php echo date("Y-m-d"); ?>" readonly></td>
             </tr>
             <tr>
-              <td>Discharge time</td>
+              <td><strong>Discharge Time</strong></td>
               <td><input class="form-control" name="dischargetime" type="text" id="dischargetime" value="<?php echo date("h:i:s"); ?>" readonly></td>
             </tr>
             <tr>
-              <td>Balance amount</td>
+              <td><strong>Balance Amount</strong></td>
               <td><input class="form-control" name="balamt" type="text" id="balamt" value="<?php echo $balanceamt; ?>" readonly onkeyup="calculatepayable()"></td>
             </tr>
             <tr>
-              <td>Discount amount</td>
+              <td><strong>Discount Amount</strong></td>
               <td><input class="form-control" name="discountamount" type="text" id="discountamount" value="0" onkeyup="calculatepayable()"></td>
             </tr>
             <tr>
-              <td>Payable amount</td>
+              <td><strong>Payable Amount</strong></td>
               <td><input class="form-control" name="paidamount" type="text" id="paidamount" value="<?php echo $balanceamt; ?>" readonly></td>
             </tr>
             <tr>
-              <td>Discount reason</td>
+              <td><strong>Discount Reason</strong></td>
               <td><textarea name="discountreason" id="discountreason"></textarea></td>
             </tr>
             <tr>
-              <td colspan="2" align="center"><input class="form-control" type="submit" name="submitfullamount" id="submitfullamount" value="Submit" /></td>
+              <td colspan="2" align="center"><input class="btn btn-raised g-bg-cyan" type="submit" name="submitfullamount" id="submitfullamount" value="Submit" /></td>
             </tr>
           </tbody>
         </table> 
-      </form>    
-
-      <table width="342" border="3">
+        <table align="right" width="342">
         <thead>
           <tr>
-            <td colspan="2" align="center"><a href='patientreport.php?patientid=<?php echo $_GET['patientid']; ?>&appointmentid=<?php echo $_GET['appointmentid']; ?>'><strong>View Patient Report>></strong></a></td>
+            <td colspan="2" align="center"><a href='patientreport.php?patientid=<?php echo $_GET['patientid']; ?>&appointmentid=<?php echo $_GET['appointmentid']; ?>'><strong>View Patient Report >></strong></a></td>
           </tr>
         </thead>
-      </table>   
+      </table>
+      </form>    
+   
 </section>   
 </div>
 </div>

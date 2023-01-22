@@ -23,7 +23,7 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
       <tbody>
         <tr>
           <th scope="col"><div align="right">Bill number &nbsp; </div></th>
-          <td> <?php echo '#HMS-'.$rsbilling_records['billingid']; ?></td>
+          <td> <?php echo '#E-Healthcare--'.$rsbilling_records['billingid']; ?></td>
         </tr>
         <tr>
           <th width="124" scope="col"><div align="right">Appointment Number &nbsp; </div></th>

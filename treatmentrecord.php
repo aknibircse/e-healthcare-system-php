@@ -11,7 +11,7 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE treatment_records SET appointmentid='$_POST[select2]',treatmentid='$_POST[select4]',patientid='$_POST[patientid]',doctorid='$_POST[select5]',treatment_description='$_POST[textarea]',uploads='$filename',treatment_date='$_POST[treatmentdate]',treatment_time='$_POST[treatmenttime]',status='Active' WHERE appointmentid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('treatment record updated successfully...');</script>";
+			echo "<script>alert('Treatment Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -25,7 +25,7 @@ if(isset($_POST['submit']))
 			echo mysqli_error($con);
 		if(mysqli_affected_rows($con)>=1)
 		{
-			echo "<script>alert('Treatment record inserted successfully...');</script>";
+			echo "<script>alert('Treatment Record Inserted Successfully.');</script>";
 		}
 	$doctorid= $_POST['select5'];
 	$billtype = "Doctor Charge";
@@ -54,7 +54,7 @@ if(isset($_GET['delid']))
 ?>
 <div class="container-fluid">
   <div class="block-header">
-    <h2>Add New treatment records</h2>
+    <h2>Add New Treatment Records</h2>
 
   </div>
 
@@ -82,7 +82,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         </tr>
         
         <tr>
-          <td>Select Treatment type</td>
+          <td>Select Treatment Type</td>
           <td>          
           <select name="select4" id="select4" class="form-control show-tick">
            <option value="">Select</option>
@@ -185,12 +185,12 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
           <table class="table table-bordered table-striped">
         <tbody>
           <tr>
-            <td width="71">Treatment type</td>
+            <td width="71">Treatment Type</td>
             <td width="78">Doctor</td>
             <td width="82">Treatment Description</td>
             <td width="103">Uploads</td>
-            <td width="43">Treatment date</td>
-            <td width="43">Treatment time</td>
+            <td width="43">Treatment Date</td>
+            <td width="43">Treatment Time</td>
             <td width="54">Status</td>
             <td width="58">Action</td>
           </tr>

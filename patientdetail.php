@@ -119,7 +119,7 @@ if(!isset($_GET['patientid']))
               <tr>
                 <td><strong>Contact Number</strong></td>
                 <td><input type="text" name="mobilenumber" id="mobilenumber"/></td>
-                <td><strong>Date Of Birth </strong></td>
+                <td><strong>Date Of Birth</strong></td>
                 <td><input type="date" name="dateofbirth" id="dateofbirth" /></td>
               </tr>
               <tr>
@@ -143,7 +143,7 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
           <td width="16%"><strong>Patient Name </strong></td>
           <td width="34%">&nbsp;<?php echo $rspatient['patientname']; ?></td>
           <td width="16%"><strong>Patient ID</strong></td>
-          <td width="34%">&nbsp;<?php echo $rspatient['patientid']; ?></td>
+          <td width="34%"><?php echo $rspatient['patientid']; ?></td>
         </tr>
         <tr>
           <td><strong>Address</strong></td>
@@ -154,8 +154,8 @@ $rspatient=mysqli_fetch_array($qsqlpatient);
         <tr>
           <td><strong>Contact Number</strong></td>
           <td>&nbsp;<?php echo $rspatient['mobileno']; ?></td>
-          <td><strong>Date Of Birth </strong></td>
-          <td>&nbsp;<?php echo $rspatient['dob']; ?></td>
+          <td><strong>Date Of Birth</strong></td>
+          <td><?php echo $rspatient['dob']; ?></td>
         </tr>
       </tbody>
     </table>

@@ -6,7 +6,7 @@ if(isset($_POST['submitapp']))
 	$sql ="INSERT INTO appointment(appointmenttype,roomid,departmentid,appointmentdate,appointmenttime,doctorid) values('$_POST[select]','$_POST[select2]','$_POST[select3]','$_POST[date]','$_POST[time]','$_POST[select5]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('appointment record inserted successfully...');</script>";
+		echo "<script>alert('appointment Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -56,19 +56,19 @@ else
   
   
   <tr>
-    <td>Department</td>
+    <td><strong>Department</strong></td>
     <td>&nbsp;<?php echo $rsdepartment['departmentname']; ?></td>
   </tr>
   <tr>
-    <td>Doctor</td>
+    <td><strong>Doctor</strong></td>
     <td>&nbsp;<?php echo $rsdoctor['doctorname']; ?></td>
   </tr>
   <tr>
-    <td>Appointment Date</td>
+    <td><strong>Appointment Date</strong></td>
     <td>&nbsp;<?php echo date("d-M-Y",strtotime($rsappointment['appointmentdate'])); ?></td>
   </tr>
   <tr>
-    <td>Appointment Time</td>
+    <td><strong>Appointment Time</strong></td>
     <td>&nbsp;<?php echo date("h:i A",strtotime($rsappointment['appointmenttime'])); ?></td>
   </tr>
 </table>

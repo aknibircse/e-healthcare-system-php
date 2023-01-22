@@ -141,8 +141,9 @@ if(isset($_GET['editid']))
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input class="form-control" type="time" name="time" id="time"
+                                        <input class="form-control" type="text" name="appointmenttime" id="appointmenttime" onfocus="(this.type='time')" placeholder="HH:MM AM/PM"
                                             value="<?php echo $rsedit['appointmenttime']; ?>" />
+                                            <i class="ion-ios-clock"></i>
                                     </div>
                                 </div>
                             </div>

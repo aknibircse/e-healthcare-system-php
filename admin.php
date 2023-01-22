@@ -68,7 +68,7 @@ if(isset($_GET['editid']))
 						<div class="row clearfix"> 
 							<div class="col-sm-12">                           
 								<div class="form-group">
-									<label>Admin Log in Id</label>
+									<label>Admin LogIn ID</label>
 									<div class="form-line">
 										<input type="text" class="form-control" name="loginid" id="loginid" value="<?php echo $rsedit['loginid']; ?>" />
 									</div>

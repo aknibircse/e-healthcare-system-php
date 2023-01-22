@@ -8,7 +8,9 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE department SET departmentname='$_POST[departmentname]',description='$_POST[textarea]',status='$_POST[select]' WHERE departmentid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('department record updated successfully...');</script>";
+			echo "<script>alert('Department Record Updated Successfully.');
+			window.location.href = 'viewdepartment.php';
+			</script>";
 		}
 		else
 		{
@@ -20,7 +22,7 @@ if(isset($_POST['submit']))
 	$sql ="INSERT INTO department(departmentname,description,status) values('$_POST[departmentname]','$_POST[textarea]','$_POST[select]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Department record inserted successfully...');</script>";
+		echo "<script>alert('Department Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -79,7 +81,7 @@ if(isset($_GET['editid']))
       </tbody>
     </table>
 	<div class="col-sm-12" style="text-align:center;">
-		<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit"  />
+		<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
 	</div>
     </form>
   </div>
@@ -102,19 +104,19 @@ function validateform()
 {
 	if(document.frmdept.departmentname.value == "")
 	{
-		alert("Department name should not be empty..");
+		alert("Department Name Should Not Be Empty.");
 		document.frmdept.departmentname.focus();
 		return false;
 	}
 	else if(!document.frmdept.departmentname.value.match(alphaspaceExp))
 	{
-		alert("Department name not valid..");
+		alert("Department Name Not Valid.");
 		document.frmdept.departmentname.focus();
 		return false;
 	}
 	else if(document.frmdept.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmdept.select.focus();
 		return false;
 	}

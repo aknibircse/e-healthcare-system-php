@@ -53,7 +53,8 @@ if(isset($_GET['delid']))
           <td>$rs[status]</td>";
           if(isset($_SESSION['adminid']))
           {
-            echo "<td>
+            echo "
+            <td style='text-align: center;'>
             <a href='department.php?editid=$rs[departmentid]' class='btn btn-raised bg-green'>Edit</a> 
             <a href='viewdepartment.php?delid=$rs[departmentid]' class='btn btn-raised bg-blush'>Delete</a> 
             </td>";

@@ -29,10 +29,10 @@ include("dbconnection.php");
 			$rstreatment = mysqli_fetch_array($qsqltreatment);
 				
 			echo "<tr>
-					<td>&nbsp;$rstreatment[treatmenttype]</td>
-					</td><td>&nbsp;" . date("d-m-Y",strtotime($rs['treatment_date'])). "  &nbsp;". date("h:i A",strtotime($rs['treatment_time'])) . "</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
-					<td>&nbsp;$rs[treatment_description]";
+					<td>$rstreatment[treatmenttype]</td>
+					</td><td>;" . date("d-m-Y",strtotime($rs['treatment_date'])). "  &nbsp;". date("h:i A",strtotime($rs['treatment_time'])) . "</td>
+					<td>$rsdoc[doctorname]</td>
+					<td>$rs[treatment_description]";
 if(file_exists("treatmentfiles/$rs[uploads]"))
 {
 	if($rs['uploads'] != "")
@@ -63,38 +63,38 @@ function validateform()
 {
 	if(document.frmtreatdetail.select.value == "")
 	{
-		alert("Treatment name should not be empty..");
+		alert("Treatment Name Should Not Be Empty.");
 		document.frmtreatdetail.select.focus();
 		return false;
 	}
 	
 	else if(document.frmtreatdetail.select2.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmtreatdetail.select2.focus();
 		return false;
 	}
 	else if(document.frmtreatdetail.textarea.value == "")
 	{
-		alert(" Treatment description should not be empty..");
+		alert("Treatment Description Should Not Be Empty.");
 		document.frmtreatdetail.textarea.focus();
 		return false;
 	}
 	else if(document.frmtreatdetail.treatmentfile.value == "")
 	{
-		alert("Upload file should not be empty..");
+		alert("Upload File Should Not Be Empty.");
 		document.frmtreatdetail.treatmentfile.focus();
 		return false;
 	}
 	else if(document.frmtreatdetail.date.value == "")
 	{
-		alert("Treatment date should not be empty..");
+		alert("Treatment Date Should Not Be Empty.");
 		document.frmtreatdetail.date.focus();
 		return false;
 	}
 	else if(document.frmtreatdetail.time.value == "")
 	{
-		alert("Treatment time should not be empty..");
+		alert("Treatment Time Should Not Be Empty.");
 		document.frmtreatdetail.time.focus();
 		return false;
 	}

@@ -36,8 +36,8 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
 		<tr>
           <th scope="col"><div align="right"></div></th>
           <td></td>
-          <th scope="col"><div align="right">Bill Amount &nbsp; </div></th>
-          <td>
+          <th scope="col"><div align="right">Bill Amount&nbsp;</div></th>
+          <td> 
 		<?php
 		$sql ="SELECT * FROM billing_records where billingid='$rsbilling_records[billingid]'";
 		$qsql = mysqli_query($con,$sql);
@@ -85,13 +85,13 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
 	    </tr>
       </tbody>
     </table>
-   <p><strong>Payment report:</strong></p>
+   <strong>Payment report :</strong> <br>
 <?php
 $sqlpayment = "SELECT * FROM payment where appointmentid='billappointmentid'";
 $qsqlpayment = mysqli_query($con,$sqlpayment);
 if(mysqli_num_rows($qsqlpayment) == 0)
 {
-	echo "<strong>No transaction details found..</strong>";
+	echo "<strong>No Transaction Details Found.</strong>";
 }
 else
 {
@@ -99,9 +99,9 @@ else
    <table class="table table-bordered table-striped">
      <tbody>
        <tr>
-         <th scope="col">Paid Date</th>
-         <th scope="col">Paid time</th>
-         <th scope="col">Paid amount</th>
+         <th scope="col"><strong>Paid Date</strong></th>
+         <th scope="col"><strong>Paid time</strong></th>
+         <th scope="col"><strong>Paid amount</strong></th>
        </tr>
 <?php       
 		while($rspayment = mysqli_fetch_array($qsqlpayment))

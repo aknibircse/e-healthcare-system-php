@@ -10,7 +10,7 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE appointment SET patientid='$_POST[select4]',departmentid='$_POST[select5]',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]',doctorid='$_POST[select6]',status='$_POST[select]' WHERE appointmentid='$_GET[editid]'";
 			if($qsql = mysqli_query($con,$sql))
 			{
-				echo "<script>alert('appointment record updated successfully...');</script>";
+				echo "<script>alert('Appointment Record Updated Successfully.');</script>";
 			}
 			else
 			{
@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
 			$sql ="INSERT INTO appointment(patientid,departmentid,appointmentdate,appointmenttime,doctorid,status) values('$_POST[select4]','$_POST[select5]','$_POST[appointmentdate]','$_POST[time]','$_POST[select6]','$_POST[select]')";
 			if($qsql = mysqli_query($con,$sql))
 			{
-				echo "<script>alert('Appointment record inserted successfully...');</script>";
+				echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
 			}
 			else
 			{
@@ -159,7 +159,7 @@ jQuery(document).ready(function($) {
 <!-- Toggle #2 -->
 <div class="toggle">
 	<!-- Toggle Link -->
-	<a href="#" title="Title of Toggle" class="toggle-trigger">Appointment record</a>
+	<a href="#" title="Title of Toggle" class="toggle-trigger">Appointment Record</a>
 	<!-- Toggle Content to display -->
 	<div class="toggle-content">
 		<p><?php include("appointmentdetail.php"); ?></p>
@@ -170,7 +170,7 @@ jQuery(document).ready(function($) {
 <!-- Toggle #3 -->
 <div class="toggle">
 	<!-- Toggle Link -->
-	<a href="#" title="Title of Toggle" class="toggle-trigger">Treatment record</a>
+	<a href="#" title="Title of Toggle" class="toggle-trigger">Treatment Record</a>
 	<!-- Toggle Content to display -->
 	<div class="toggle-content">
 		<p><?php include("treatmentdetail.php"); ?></p>
@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 <!-- Toggle #4 -->
 <div class="toggle">
 	<!-- Toggle Link -->
-	<a href="#" title="Title of Toggle" class="toggle-trigger">Prescription record</a>
+	<a href="#" title="Title of Toggle" class="toggle-trigger">Prescription Record</a>
 	<!-- Toggle Content to display -->
 	<div class="toggle-content">
 		<p><?php
