@@ -30,15 +30,15 @@ if(isset($_GET['approveid']))
 		<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
 
 			<thead>
-				<tr>
+				<tr style="text-align: center;">
 
-					<td>Patient Detail</td>
-					<td>Date & Time</td>
-					<td>Department</td>
-					<td>Doctor</td>
-					<td>Appointment Reason</td>
-					<td>Status</td>
-					<td><div align="center">Action</div></td>
+					<td><strong>Patient Detail</strong></td>
+					<td><strong>Date & Time</strong></td>
+					<td><strong>Department</strong></td>
+					<td><strong>Doctor</strong></td>
+					<td><strong>Appointment Reason</strong></td>
+					<td><strong>Status</strong></td>
+					<td><strong>Action</strong></td>
 				</tr>
 			</thead>
 			<tbody>
@@ -69,12 +69,12 @@ if(isset($_GET['approveid']))
 					$rsdoc = mysqli_fetch_array($qsqldoc);
 					echo "<tr>
 
-					<td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>		 
-					<td>&nbsp;$rs[appointmentdate]&nbsp;$rs[appointmenttime]</td> 
-					<td>&nbsp;$rsdept[departmentname]</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
-					<td>&nbsp;$rs[app_reason]</td>
-					<td>&nbsp;$rs[status]</td>
+					<td >$rspat[patientname]<br>$rspat[mobileno]</td>		 
+					<td>$rs[appointmentdate]&nbsp;$rs[appointmenttime]</td> 
+					<td style='text-align: center;'>$rsdept[departmentname]</td>
+					<td>$rsdoc[doctorname]</td>
+					<td>$rs[app_reason]</td>
+					<td style='text-align: center;'>$rs[status]</td>
 					<td><div align='center'>";
 					if($rs['status'] != "Approved")
 					{
@@ -82,14 +82,14 @@ if(isset($_GET['approveid']))
 						{
 							echo "<a href='appointmentapproval.php?editid=$rs[appointmentid]' class='btn btn-raised g-bg-cyan>Approve</a><hr>";
 						}
-						echo "  <a href='viewappointment.php?delid=$rs[appointmentid]' class='btn btn-raised g-bg-blush2'>Delete</a>";
+						echo "  <a href='viewappointment.php?delid=$rs[appointmentid]' class='btn btn-sm btn-raised g-bg-blush2'>Delete</a>";
 					}
 					else
 					{
 						echo "<a href='patientreport.php?patientid=$rs[patientid]&appointmentid=$rs[appointmentid]' class='btn btn-raised bg-cyan'>View Report</a>";
 					}
 					echo "</center></td></tr>";
-				}
+				} 
 				?>
 			</tbody>
 		</table>

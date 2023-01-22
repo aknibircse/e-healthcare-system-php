@@ -8,7 +8,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('prescription deleted successfully..');</script>";
+		echo "<script>alert('Prescription Deleted Successfully.');</script>";
 	}
 }
 ?>

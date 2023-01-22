@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE admin SET adminname='$_POST[adminname]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]' WHERE adminid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<div class='alert alert-success'>
+			echo "<div class='alert alert-success' style='text-align:center;'>
 			Admin Record updated successfully
 			</div>";
 		}
@@ -121,7 +121,7 @@ if(isset($_GET['editid']))
 							</div>                            
 						</div>                    
 
-						<div class="col-sm-12">
+						<div class="col-sm-12" style="text-align: center;">
 							<input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
 
 						</div>
@@ -134,10 +134,11 @@ if(isset($_GET['editid']))
 	</div>
 </div>
 
-				<?php
-				include("adfooter.php");
-				?>
-				<script type="application/javascript">
+<?php
+include("adfooter.php");
+?>
+
+<script type="application/javascript">
 var alphaExp = /^[a-zA-Z]+$/; //Variable to validate only alphabets
 var alphaspaceExp = /^[a-zA-Z\s]+$/; //Variable to validate only alphabets and space
 var numericExpression = /^[0-9]+$/; //Variable to validate only numbers

@@ -210,7 +210,7 @@ if(isset($_GET['editid']))
                             </div>
 
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" style="text-align: center;">
 
                                 <input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit"
                                     value="Submit" />

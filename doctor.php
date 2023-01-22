@@ -151,7 +151,9 @@ if(isset($_GET['editid']))
 
 
 					
-					<input class="btn btn-default" type="submit" name="submit" id="submit" value="Submit" />
+					<div style="text-align: center;">
+					<input class="btn btn-raised g-bg-cyan" type="submit" name="submit" id="submit" value="Submit" />
+					</div>
 				
 
 

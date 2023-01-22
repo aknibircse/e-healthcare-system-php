@@ -56,12 +56,10 @@ if(isset($_GET['editid']))
 
         <form method="post" action="" name="frmpatient" onSubmit="return validateform()" style="padding: 10px">
 
-
-
             <div class="form-group"><label>Patient Name</label>
                 <div class="form-line">
                     <input class="form-control" type="text" name="patientname" id="patientname"
-                        value="<?php echo $rsedit['patientname']; ?>" />
+                       value="<?php echo $rsedit['patientname']; ?>" />
                 </div>
             </div>
 
@@ -198,7 +196,9 @@ if(isset($_GET['editid']))
 
 
 
-            <input class="btn btn-default" type="submit" name="submit" id="submit" value="Submit" />
+            <div style="text-align: center;">
+            <input class="btn btn-raised g-bg-cyan" type="submit" name="submit" id="submit" value="Submit" />
+            </div>
 
 
 

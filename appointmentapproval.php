@@ -141,7 +141,7 @@ if(isset($_GET['editid']))
           <td><input class="form-control" name="appreason" id="appreason" value="<?php echo $rsedit['app_reason']; ?>"/></td>         
         </tr>
         <tr>
-          <td colspan="2" align="center"><input class="btn btn-default" type="submit" name="submit" id="submit" value="Submit" /></td>
+          <td colspan="2" align="center"><input class="btn btn-raised g-bg-cyan"type="submit" name="submit" id="submit" value="Submit" /></td>
         </tr>
       </tbody>
     </table>

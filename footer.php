@@ -36,7 +36,7 @@
   <!-- Rights -->
   <div class="rights style-2">
     <div class="container">
-      <p>© <?php echo date("Y"); ?> E-healthcare System. 
+      <p>© <?php echo date("Y"); ?> E-Healthcare System. 
       <span style="color: white" placeholder = "name-inside-span"></span></p>
     </div>
   </div>

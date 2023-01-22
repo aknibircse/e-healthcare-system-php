@@ -23,11 +23,11 @@ if(isset($_GET['delid']))
 
 
     <thead>
-      <tr>
-        <td width="12%" height="40">Admin Name</td>
-        <td width="11%">Login ID</td>
-        <td width="12%">Status</td>
-        <td width="10%">Action</td>
+      <tr style="text-align: center;">
+        <td width="12%" height="40"><strong>Admin Name</strong></td>
+        <td width="11%"><strong>Login ID</strong></td>
+        <td width="12%"><strong>Status</strong></td>
+        <td width="10%"><strong>Action</strong></td>
       </tr>
     </thead>
     <tbody>
@@ -38,9 +38,9 @@ if(isset($_GET['delid']))
      {
       echo "<tr>
       <td>$rs[adminname]</td>
-      <td>$rs[loginid]</td>
-      <td>$rs[status]</td>
-      <td>
+      <td style='text-align: center;'>$rs[loginid]</td>
+      <td style='text-align: center;'>$rs[status]</td>
+      <td style='text-align: center;'>
       <a href='admin.php?editid=$rs[adminid]' class='btn btn-raised g-bg-cyan'>Edit</a> <a href='viewadmin.php?delid=$rs[adminid]' class='btn btn-raised g-bg-blush2'>Delete</a> </td>
       </tr>";
     }

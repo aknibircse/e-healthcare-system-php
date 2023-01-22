@@ -2230,7 +2230,8 @@ header .is-sticky .sticky .logo {
 }
 
 .main-oppoiment {
-    background: url(../images/appoiment-bg-main.jpg) center bottom;
+    background: url(../images/appoiment-bg-main.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 100px 0;
 }

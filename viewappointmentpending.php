@@ -38,13 +38,13 @@ if(isset($_GET['approveid']))
 
 				<tr>
 
-					<th>Patient Detail</th>
-					<th>Date & Time</th>
-					<th>Department</th>
-					<th>Doctor</th>
-					<th>Appointment Reason</th>
-					<th>Status</th>
-					<th width="15%">Action</th>
+					<th style="text-align: center;">Patient Detail</th>
+					<th style="text-align: center;">Date & Time</th>
+					<th style="text-align: center;">Department</th>
+					<th style="text-align: center;">Doctor</th>
+					<th style="text-align: center;">Appointment Reason</th>
+					<th style="text-align: center;">Status</th>
+					<th width="15%" style="text-align: center;">Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -71,13 +71,13 @@ if(isset($_GET['approveid']))
 					$rsdoc = mysqli_fetch_array($qsqldoc);
 					echo "<tr>
 
-					<td>&nbsp;$rspat[patientname]<br>&nbsp;$rspat[mobileno]</td>		 
-					<td>&nbsp;" . date("d-M-Y",strtotime($rs['appointmentdate'])) . " &nbsp; " . date("H:i A",strtotime($rs['appointmenttime'])) . "</td> 
-					<td>&nbsp;$rsdept[departmentname]</td>
-					<td>&nbsp;$rsdoc[doctorname]</td>
-					<td>&nbsp;$rs[app_reason]</td>
-					<td>&nbsp;$rs[status]</td>
-					<td>";
+					<td style='text-align: center;'>$rspat[patientname]<br>$rspat[mobileno]</td>		 
+					<td style='text-align: center;'>" . date("d-M-Y",strtotime($rs['appointmentdate'])) . " <br>" . date("H:i A",strtotime($rs['appointmenttime'])) . "</td> 
+					<td style='text-align: center;'>$rsdept[departmentname]</td>
+					<td style='text-align: center;'>$rsdoc[doctorname]</td>
+					<td style='text-align: center;'>$rs[app_reason]</td>
+					<td style='text-align: center;'>$rs[status]</td>
+					<td style='text-align: center;'>";
 					if($rs['status'] != "Approved")
 					{
 						if(!(isset($_SESSION['patientid'])))

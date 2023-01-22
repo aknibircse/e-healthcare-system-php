@@ -80,9 +80,9 @@ if(isset($_SESSION['patientid']))
          }
          else
          {
-             echo "<h2 class='text-center'>Appointment taken successfully.. </h2>";
-             echo "<p class='text-center'>Appointment record is in pending process. Please wait for confirmation message.. </p>";
-             echo "<p class='text-center'> <a href='patientlogin.php'>Click here to Login</a>. </p>";	
+             echo "<h2 class='text-center'>Appointment Taken Successfully.</h2>";
+             echo "<p class='text-center'>Appointment Record is Pending in Process. Please Wait for Confirmation Message.</p>";
+             echo "<p class='text-center'> <a href='patientaccount.php'>Back to Dashboard</a>. </p>";	
          }
      }
  }
