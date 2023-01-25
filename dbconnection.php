@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$con=mysqli_connect("localhost","root","","oHMSphp");
+$con=mysqli_connect("localhost","root","","ehsphp");
 
 // Check connection
 if (!$con)
