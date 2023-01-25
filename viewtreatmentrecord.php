@@ -60,12 +60,12 @@ if(isset($_GET['delid']))
 			$rstreatment = mysqli_fetch_array($qsqltreatment);
 			
         echo "<tr>
-          <td>&nbsp;$rstreatment[treatmenttype]</td>
-		   <td>&nbsp;$rspat[patientname]</td>
-		    <td>&nbsp;$rsdoc[doctorname]</td>
-			<td>&nbsp;$rs[treatment_description]</td>
-			 <td>&nbsp;$rs[treatment_date]</td>
-			  <td>&nbsp;$rs[treatment_time]</td>";  
+          <td>$rstreatment[treatmenttype]</td>
+		   <td>$rspat[patientname]</td>
+		    <td>$rsdoc[doctorname]</td>
+			<td>$rs[treatment_description]</td>
+			 <td>$rs[treatment_date]</td>
+			  <td>$rs[treatment_time]</td>";  
 	
        echo "<tr></tr>";
 		}
