@@ -37,12 +37,12 @@ if(isset($_GET['delid']))
 		while($rs = mysqli_fetch_array($qsql))
 		{
         echo "<tr>
-          <td>&nbsp;$rs[medicine_name]</td>
-          <td>&nbsp;$rs[cost]</td>
-		   <td>&nbsp;$rs[unit]</td>
-		    <td>&nbsp;$rs[dosage]</td>
-			 <td>&nbsp;$rs[status]</td>
-			  <td>&nbsp;<a href='prescriptionrecord.php?editid=$rs[prescription_record_id]'>Edit</a>  | <a href='viewprescriptionrecord.php?delid=$rs[prescription_record_id]'>Delete</a> </td>
+      <td>&nbsp;$rs[medicine_name]</td>
+      <td>&nbsp;$rs[cost]</td>
+		  <td>&nbsp;$rs[unit]</td>
+		  <td>&nbsp;$rs[dosage]</td>
+			<td>&nbsp;$rs[status]</td>
+			<td>&nbsp;<a href='prescriptionrecord.php?editid=$rs[prescription_record_id]'>Edit</a>  | <a href='viewprescriptionrecord.php?delid=$rs[prescription_record_id]'>Delete</a> </td>
         </tr>";
 		}
 		?>
