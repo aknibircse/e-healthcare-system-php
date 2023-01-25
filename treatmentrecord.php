@@ -246,50 +246,50 @@ function validateform()
 {
 	if(document.frmtreatrec.select2.value == "")
 	{
-		alert("Appoitment ID should not be empty..");
+		alert("Appoitment ID Should Not Be Empty.");
 		document.frmtreatrec.select2.focus();
 		return false;
 	}
 	
 	else if(document.frmtreatrec.select4.value == "")
 	{
-		alert("Treatment ID should not be empty..");
+		alert("Treatment ID Should Not Be Empty.");
 		document.frmtreatrec.select4.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.select3.value == "")
 	{
-		alert("Patient ID should not be empty..");
+		alert("Patient ID Should Not Be Empty.");
 		document.frmtreatrec.select3.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.select5.value == "")
 	{
-		alert("Doctor ID should not be empty..");
+		alert("Doctor ID Should Not Be Empty.");
 		document.frmtreatrec.select5.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.textarea.value == "")
 	{
-		alert("Treatment Description should not be empty..");
+		alert("Treatment Description Should Not Be Empty.");
 		document.frmtreatrec.textarea.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.treatmentdate.value == "")
 	{
-		alert("Treatment date should not be empty..");
+		alert("Treatment Date Should Not Be Empty.");
 		document.frmtreatrec.treatmentdate.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.treatmenttime.value == "")
 	{
-		alert("Treatment time should not be empty..");
+		alert("Treatment Time Should Not Be Empty.");
 		document.frmtreatrec.treatmenttime.focus();
 		return false;
 	}
 	else if(document.frmtreatrec.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmtreatrec.select.focus();
 		return false;
 	}

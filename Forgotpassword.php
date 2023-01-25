@@ -10,7 +10,7 @@ include("header.php");
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>Add new Forgot Password record</h1>
+    <h1>Add new Forgot Password Record</h1>
     <table width="200" border="3">
       <tbody>
         <tr>

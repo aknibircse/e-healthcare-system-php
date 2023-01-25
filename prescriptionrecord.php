@@ -8,7 +8,7 @@ if(isset($_GET['delid']))
 	if(mysqli_affected_rows($con) == 1)
 	{
 			echo "<script>window.location='prescriptionrecord.php?prescriptionid=$_GET[prescriptionid]';</script>";
-		echo "<script>alert('prescription deleted successfully..');</script>";
+		echo "<script>alert('Prescription Deleted Successfully.');</script>";
 	}
 }
 if(isset($_POST['submit']))
@@ -18,7 +18,7 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE prescription_records SET prescription_id='$_POST[prescriptionid]',medicine_name='$_POST[medicine]',cost='$_POST[cost]',unit='$_POST[unit]',dosage='$_POST[select2]',status=' $_POST[select]' WHERE prescription_record_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('prescription record updated successfully...');</script>";
+			echo "<script>alert('Prescription Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -80,9 +80,9 @@ if(isset($_GET['editid']))
 			$rsdoctor = mysqli_fetch_array($qsqldoctor);
 			
         echo "<tr>
-          <td>&nbsp;$rsdoctor[doctorname]</td>
-          <td>&nbsp;$rspatient[patientname]</td>
-		   <td>&nbsp;$rs[prescriptiondate]</td>
+        <td>&nbsp;$rsdoctor[doctorname]</td>
+        <td>&nbsp;$rspatient[patientname]</td>
+		<td>&nbsp;$rs[prescriptiondate]</td>
 		<td>&nbsp;$rs[status]</td>
 		
         </tr>";
@@ -162,7 +162,7 @@ if(isset($_GET['editid']))
 	}
 	?>
 	</div>
-	<div class="block-header"><h2>View Prescription record</h2></div>
+	<div class="block-header"><h2>View Prescription Record</h2></div>
     
   	<div class="card" style="padding:10px">
     <table class="table table-hover table-striped">
@@ -268,37 +268,37 @@ function validateform()
 {
 	if(document.frmpresrecord.prescriptionid.value == "")
 	{
-		alert("Prescription id should not be empty..");
+		alert("Prescription ID Should Not Be Empty.");
 		document.frmpresrecord.prescriptionid.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.medicine.value == "")
 	{
-		alert("Medicine field should not be empty..");
+		alert("Medicine Field Should Not Be Empty.");
 		document.frmpresrecord.medicine.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.cost.value == "")
 	{
-		alert("Cost should not be empty..");
+		alert("Cost Should Not Be Empty.");
 		document.frmpresrecord.cost.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.unit.value == "")
 	{
-		alert("Unit should not be empty..");
+		alert("Unit Should Not Be Empty.");
 		document.frmpresrecord.unit.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.select2.value == "")
 	{
-		alert("Dosage should not be empty..");
+		alert("Dosage Should Not Be Empty.");
 		document.frmpresrecord.select2.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmpresrecord.select.focus();
 		return false;
 	}

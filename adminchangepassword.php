@@ -80,25 +80,25 @@ function validateform1()
 {
 	if(document.frmadminchange.oldpassword.value == "")
 	{
-		alert("Old Password should not be Empty..");
+		alert("Old Password Should Not Be Empty.");
 		document.frmadminchange.oldpassword.focus();
 		return false;
 	}
 	else if(document.frmadminchange.newpassword.value == "")
 	{
-		alert("New Password should not be empty..");
+		alert("New Password Should Not Be Empty.");
 		document.frmadminchange.newpassword.focus();
 		return false;
 	}
 	else if(document.frmadminchange.newpassword.value.length < 8)
 	{
-		alert("New Password length should be more than 8 characters...");
+		alert("New Password Should Be More Than 8 Characters.");
 		document.frmadminchange.newpassword.focus();
 		return false;
 	}
 	else if(document.frmadminchange.newpassword.value != document.frmadminchange.password.value )
 	{
-		alert(" New Password and confirm password should be equal..");
+		alert("Confirm Password First.");
 		document.frmadminchange.password.focus();
 		return false;
 	}

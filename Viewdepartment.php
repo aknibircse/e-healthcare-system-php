@@ -10,7 +10,7 @@ if(isset($_GET['delid']))
 		echo "<script>
     Swal.fire({
       title: 'Done!',
-      text: 'department deleted successfully',
+      text: 'Department Deleted Successfully',
       type: 'success',
       
     })</script>";

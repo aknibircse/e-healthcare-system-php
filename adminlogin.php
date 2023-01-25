@@ -48,8 +48,8 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
-		$err = "<div class='alert alert-danger'>
-		<strong>Oh !</strong> Change a few things up and try submitting again.
+		$err = "<div class='alert alert-danger' style='text-align: center;'>
+		<strong >Opps !!</strong> Wrong Username or Password.
 	</div>";
 	}
 }
@@ -63,7 +63,7 @@ if(isset($_POST['submit']))
 ?></div>
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>E-healthcare System</span>Login <span class="msg">Hello, Admin!</span></h1>
+        <h1 class="title"><span>E-Healthcare System</span>Login <span class="msg">Hello, Admin!</span></h1>
         <div class="col-md-12">
 
     <form method="post" action="" name="frmadminlogin" id="sign_in" onSubmit="return validateform()">
@@ -110,25 +110,25 @@ function validateform()
 {
 	if(document.frmadminlogin.loginid.value == "")
 	{
-		document.getElementById("err").innerHTML ="<div class='alert alert-info'><strong>Heads up!</strong> Please enter Password</div>";
+		document.getElementById("err").innerHTML ="<div class='alert alert-info'><strong>Heads Up !!</strong> Please Enter Password.</div>";
 		document.frmadminlogin.loginid.focus();
 		return false;
 	}
 	else if(!document.frmadminlogin.loginid.value.match(alphanumericExp))
 	{
-		document.getElementById("err").innerHTML ="<div class='alert alert-Warning'><strong>Heads up!</strong> Invalid Password</div>";
+		document.getElementById("err").innerHTML ="<div class='alert alert-Warning'><strong>Heads Up !!</strong> Invalid Password.</div>";
 		document.frmadminlogin.loginid.focus();
 		return false;
 	}
 	else if(document.frmadminlogin.password.value == "")
 	{
-		document.getElementById("err").innerHTML ="<div class='alert alert-info'><strong>Heads up!</strong> Should not be empty</div>";
+		document.getElementById("err").innerHTML ="<div class='alert alert-info' style='text-align: center;'><strong>Heads Up !!</strong> Password Should Not Be Empty.</div>";
 		document.frmadminlogin.password.focus();
 		return false;
 	}
 	else if(document.frmadminlogin.password.value.length < 8)
 	{
-		document.getElementById("err").innerHTML ="<div class='alert alert-info'><strong>Heads up!</strong> Length should be 8</div>";
+		document.getElementById("err").innerHTML ="<div class='alert alert-info'><strong>Heads Up !!</strong> Password Length Should Be 8 Charecter.</div>";
 		document.frmadminlogin.password.focus();
 		return false;
 	}

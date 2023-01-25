@@ -37,7 +37,7 @@ if(isset($_SESSION['patientid']))
                         <div class="row clearfix">
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                	<label for="">Patient name</label>
+                                	<label for="">Patient Name</label>
                                     <div class="form-line">
                                     	
                                         <input class="form-control" type="text" name="patientname" id="patientname"  value="<?php echo $rsedit['patientname']; ?>"/>
@@ -46,7 +46,7 @@ if(isset($_SESSION['patientid']))
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                	<label for="">Admission date</label>
+                                	<label for="">Enrolment Date</label>
                                     <div class="form-line">
                                     	
                                         <input class="form-control" type="date" name="admissiondate" id="admissiondate" value="<?php echo $rsedit['admissiondate']; ?>" />
@@ -57,7 +57,7 @@ if(isset($_SESSION['patientid']))
                         <div class="row clearfix">
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                	<label for="admissiontme">Admission time</label>
+                                	<label for="admissiontme">Enrolment Time</label>
                                     <div class="form-line">                                 	
                                     	
                                         <input class="form-control" type="time" name="admissiontme" id="admissiontme" value="<?php echo $rsedit['admissiontime']; ?>" />
@@ -76,7 +76,7 @@ if(isset($_SESSION['patientid']))
                         <div class="row clearfix">
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                	<label for="">Mobile number</label>
+                                	<label for="">Mobile Number</label>
                                 	<div class="form-line">
                                     <input class="form-control" type="text" name="mobilenumber" id="mobilenumber" value="<?php echo $rsedit['mobileno']; ?>" />
                                     </div>
@@ -97,7 +97,7 @@ if(isset($_SESSION['patientid']))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">pincode</label>
+                                    	<label for="">ZIP Code</label>
                                     	<div class="form-line">
 
                                         <input class="form-control" type="text" name="pincode" id="pincode" value="<?php echo $rsedit['pincode']; ?>" />
@@ -108,7 +108,7 @@ if(isset($_SESSION['patientid']))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">loginid</label>
+                                    	<label for="">Login ID</label>
                                     	<div class="form-line">
                                         <input class="form-control" type="text" name="loginid" id="loginid"  value="<?php echo $rsedit['loginid']; ?>"/>
                                     </div>
@@ -118,7 +118,7 @@ if(isset($_SESSION['patientid']))
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="blood group">Blood group</label>
+                                    	<label for="blood group">Blood Group</label>
                                     	<div class="form-line">
                                     	<select name="select2" id="select2" class="form-control show-tick">
                                     		<option value="" selected hidden="">Select</option>
@@ -167,17 +167,17 @@ if(isset($_SESSION['patientid']))
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">Date of birth</label>
+                                    	<label for="">Date of Birth</label>
                                     	<div class="form-line">
                                        <input class="form-control" type="date" name="dateofbirth" id="dateofbirth"  value="<?php echo $rsedit['dob']; ?>"/>
                                    </div>
                                     </div>
                                 </div>
                             </div>                          
-                            <div class="col-sm-12">                                
+                            <div class="col-sm-12" style="text-align: center">                                
                                 <input type="submit" class="btn btn-raised g-bg-cyan" name="submit" id="submit" value="Submit" />
                             </div>
                         </div>
@@ -205,121 +205,121 @@ function validateform()
 {
 	if(document.frmpatprfl.patientname.value == "")
 	{
-		alert("Patient name should not be empty..");
+		alert("Patient Name Should Not Be Empty.");
 		document.frmpatprfl.patientname.focus();
 		return false;
 	}
 	else if(!document.frmpatprfl.patientname.value.match(alphaspaceExp))
 	{
-		alert("Patient name not valid..");
+		alert("Patient Name Not Valid.");
 		document.frmpatprfl.patientname.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.admissiondate.value == "")
 	{
-		alert("Admission date should not be empty..");
+		alert("Admission Date Should Not Be Empty.");
 		document.frmpatprfl.admissiondate.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.admissiontme.value == "")
 	{
-		alert("Admission time should not be empty..");
+		alert("Admission Time Should Not Be Empty.");
 		document.frmpatprfl.admissiontme.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.address.value == "")
 	{
-		alert("Address should not be empty..");
+		alert("Address Should Not Be Empty.");
 		document.frmpatprfl.address.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.mobilenumber.value == "")
 	{
-		alert("Mobile number should not be empty..");
+		alert("Mobile Number Should Not Be Empty.");
 		document.frmpatprfl.mobilenumber.focus();
 		return false;
 	}
 	else if(!document.frmpatprfl.mobilenumber.value.match(numericExpression))
 	{
-		alert("Mobile number not valid..");
+		alert("Mobile Number Not Valid.");
 		document.frmpatprfl.mobilenumber.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.city.value == "")
 	{
-		alert("City should not be empty..");
+		alert("City Should Not Be Empty.");
 		document.frmpatprfl.city.focus();
 		return false;
 	}
 	else if(!document.frmpatprfl.city.value.match(alphaspaceExp))
 	{
-		alert("City not valid..");
+		alert("City Not Valid.");
 		document.frmpatprfl.city.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.pincode.value == "")
 	{
-		alert("Pincode should not be empty..");
+		alert("ZIP Code Should Not Be Empty.");
 		document.frmpatprfl.pincode.focus();
 		return false;
 	}
 	else if(!document.frmpatprfl.pincode.value.match(numericExpression))
 	{
-		alert("Pincode not valid..");
+		alert("ZIP Code Not Valid.");
 		document.frmpatprfl.pincode.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID Should Not Be Empty.");
 		document.frmpatprfl.loginid.focus();
 		return false;
 	}
 	else if(!document.frmpatprfl.loginid.value.match(emailExp))
 	{
-		alert("Login ID not valid..");
+		alert("Login ID Not Valid.");
 		document.frmpatprfl.loginid.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password Should Not Be Empty.");
 		document.frmpatprfl.password.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password Length Should Be More Than 8 Characters.");
 		document.frmpatprfl.password.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.password.value != document.frmpatprfl.confirmpassword.value )
 	{
-		alert("Password and confirm password should be equal..");
+		alert("Confirm Password First.");
 		document.frmpatprfl.confirmpassword.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.select2.value == "")
 	{
-		alert("Blood Group should not be empty..");
+		alert("Blood Group Should Not Be Empty.");
 		document.frmpatprfl.select2.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.select3.value == "")
 	{
-		alert("Gender should not be empty..");
+		alert("Gender Should Not Be Empty.");
 		document.frmpatprfl.select3.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.dateofbirth.value == "")
 	{
-		alert("Date Of Birth should not be empty..");
+		alert("Date Of Birth Should Not Be Empty.");
 		document.frmpatprfl.dateofbirth.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmpatprfl.select.focus();
 		return false;
 	}

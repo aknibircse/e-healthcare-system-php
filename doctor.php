@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 			$sql ="UPDATE doctor SET doctorname='$_POST[doctorname]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',password='$_POST[password]',status='$_POST[select]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE doctorid='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('doctor record updated successfully...');</script>";
+			echo "<script>alert('Doctor Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
 	$sql ="INSERT INTO doctor(doctorname,mobileno,departmentid,loginid,password,status,education,experience,consultancy_charge) values('$_POST[doctorname]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','Active','$_POST[education]','$_POST[experience]','$_POST[consultancy_charge]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Doctor record inserted successfully...');</script>";
+		echo "<script>alert('Doctor Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -39,7 +39,7 @@ if(isset($_GET['editid']))
 
 <div class="container-fluid">
 	<div class="block-header">
-		<h2 class="text-center"> Add New Doctor </h2>
+		<h2 class="text-center">Add New Doctor</h2>
 	</div>
 	<div class="row clearfix">
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -176,91 +176,91 @@ function validateform()
 {
 	if(document.frmdoct.doctorname.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmdoct.doctorname.focus();
 		return false;
 	}
 	else if(!document.frmdoct.doctorname.value.match(alphaspaceExp))
 	{
-		alert("Doctor name not valid..");
+		alert("Doctor Name Not Valid.");
 		document.frmdoct.doctorname.focus();
 		return false;
 	}
 	else if(document.frmdoct.mobilenumber.value == "")
 	{
-		alert("Mobile number should not be empty..");
+		alert("Mobile Number Should Not Be Empty.");
 		document.frmdoct.mobilenumber.focus();
 		return false;
 	}
 	else if(!document.frmdoct.mobilenumber.value.match(numericExpression))
 	{
-		alert("Mobile number not valid..");
+		alert("Mobile Number Not Valid.");
 		document.frmdoct.mobilenumber.focus();
 		return false;
 	}
 	else if(document.frmdoct.select3.value == "")
 	{
-		alert("Department ID should not be empty..");
+		alert("Department ID Should Not Be Empty.");
 		document.frmdoct.select3.focus();
 		return false;
 	}
 	else if(document.frmdoct.loginid.value == "")
 	{
-		alert("loginid should not be empty..");
+		alert("Login ID Should Not Be Empty.");
 		document.frmdoct.loginid.focus();
 		return false;
 	}
 	else if(!document.frmdoct.loginid.value.match(alphanumericExp))
 	{
-		alert("loginid not valid..");
+		alert("LogIn ID Not Valid.");
 		document.frmdoct.loginid.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password Should Not Be Empty.");
 		document.frmdoct.password.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password Length Should Be More Than 8 Characters.");
 		document.frmdoct.password.focus();
 		return false;
 	}
 	else if(document.frmdoct.password.value != document.frmdoct.cnfirmpassword.value )
 	{
-		alert("Password and confirm password should be equal..");
+		alert("Confirm Password First.");
 		document.frmdoct.password.focus();
 		return false;
 	}
 	else if(document.frmdoct.education.value == "")
 	{
-		alert("Education should not be empty..");
+		alert("Education Should Not Be Empty.");
 		document.frmdoct.education.focus();
 		return false;
 	}
 	else if(!document.frmdoct.education.value.match(alphaExp))
 	{
-		alert("Education not valid..");
+		alert("Education Not Valid.");
 		document.frmdoct.education.focus();
 		return false;
 	}
 	else if(document.frmdoct.experience.value == "")
 	{
-		alert("Experience should not be empty..");
+		alert("Experience Should Not Be Empty.");
 		document.frmdoct.experience.focus();
 		return false;
 	}
 	else if(!document.frmdoct.experience.value.match(numericExpression))
 	{
-		alert("Experience not valid..");
+		alert("Experience Not Valid.");
 		document.frmdoct.experience.focus();
 		return false;
 	}
 	else if(document.frmdoct.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmdoct.select.focus();
 		return false;
 	}

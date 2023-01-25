@@ -7,7 +7,7 @@ if(isset($_POST["submitfullamount"]))
   $sql ="INSERT INTO payment(patientid,appointmentid,paiddate,paidtime,paidamount,status) values('$_GET[patientid]','$_GET[appointmentid]','$dt','$tim','$_POST[paidamount]','Active')";
   if($qsql = mysqli_query($con,$sql))
   {
-   echo "<script>alert('payment record inserted successfully...');</script>";
+   echo "<script>alert('Payment Record Inserted Successfully.');</script>";
  }
  else
  {

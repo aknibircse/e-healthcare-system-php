@@ -57,13 +57,13 @@ $rspatientappointment = mysqli_fetch_array($qsqlpatientappointment);
                         if(mysqli_num_rows($qsqlpatientappointment) == 0)
                         {
                             ?>
-                        <h3>Appointment Records not found.</h3>
+                        <h3>Appointment Records Not Found.</h3>
                         <?php
                         }
                         else
                         {
                             ?>
-                        <h3>Last Appointment taken on - <?php echo $rspatientappointment['appointmentdate']; ?>
+                        <h3>Last Appointment Taken On - <?php echo $rspatientappointment['appointmentdate']; ?>
                             <?php echo $rspatientappointment['appointmenttime']; ?> </h3>
                         <?php
                         }

@@ -79,9 +79,9 @@ if(isset($_GET['editid']))
 			$rsdoctor = mysqli_fetch_array($qsqldoctor);
 			
         echo "<tr>
-          <td>&nbsp;$rsdoctor[doctorname]</td>
-          <td>&nbsp;$rspatient[patientname]</td>
-		   <td>&nbsp;$rs[prescriptiondate]</td>
+        <td>&nbsp;$rsdoctor[doctorname]</td>
+        <td>&nbsp;$rspatient[patientname]</td>
+		<td>&nbsp;$rs[prescriptiondate]</td>
 		<td>&nbsp;$rs[status]</td>
 		
         </tr>";
@@ -152,37 +152,37 @@ function validateform()
 {
 	if(document.frmpresrecord.prescriptionid.value == "")
 	{
-		alert("Prescription id should not be empty..");
+		alert("Prescription ID Should Not Be Empty.");
 		document.frmpresrecord.prescriptionid.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.medicine.value == "")
 	{
-		alert("Medicine field should not be empty..");
+		alert("Medicine Field Should Not Be Empty.");
 		document.frmpresrecord.medicine.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.cost.value == "")
 	{
-		alert("Cost should not be empty..");
+		alert("Cost Should Not Be Empty.");
 		document.frmpresrecord.cost.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.unit.value == "")
 	{
-		alert("Unit should not be empty..");
+		alert("Unit Should Not Be Empty.");
 		document.frmpresrecord.unit.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.select2.value == "")
 	{
-		alert("Dosage should not be empty..");
+		alert("Dosage Should Not Be Empty.");
 		document.frmpresrecord.select2.focus();
 		return false;
 	}
 	else if(document.frmpresrecord.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmpresrecord.select.focus();
 		return false;
 	}

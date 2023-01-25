@@ -95,10 +95,10 @@ function sendmail($toaddress,$subject,$message)
 	$mail->AltBody = $subject;
 	
 	if(!$mail->send()) {
-		echo 'Message could not be sent.';
+		echo 'Message Could Not Be Sent.';
 		echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
-		echo '<center><strong><font color=green>Mail sent.</font></strong></center>';
+		echo '<center><strong><font color=green>Mail Sent.</font></strong></center>';
 	}
 }
 ?>

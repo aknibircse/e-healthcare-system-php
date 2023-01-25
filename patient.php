@@ -223,83 +223,83 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 
 function validateform() {
     if (document.frmpatient.patientname.value == "") {
-        alert("Patient name should not be empty..");
+        alert("Patient Name Should Not Be Empty.");
         document.frmpatient.patientname.focus();
         return false;
     } else if (!document.frmpatient.patientname.value.match(alphaspaceExp)) {
-        alert("Patient name not valid..");
+        alert("Patient Name Not Valid.");
         document.frmpatient.patientname.focus();
         return false;
     } else if (document.frmpatient.admissiondate.value == "") {
-        alert("Admission date should not be empty..");
+        alert("Admission Date Should Not Be Empty.");
         document.frmpatient.admissiondate.focus();
         return false;
     } else if (document.frmpatient.admissiontme.value == "") {
-        alert("Admission time should not be empty..");
+        alert("Admission Time Should Not Be Empty.");
         document.frmpatient.admissiontme.focus();
         return false;
     } else if (document.frmpatient.address.value == "") {
-        alert("Address should not be empty..");
+        alert("Address Should Not Be Empty.");
         document.frmpatient.address.focus();
         return false;
     } else if (document.frmpatient.mobilenumber.value == "") {
-        alert("Mobile number should not be empty..");
+        alert("Mobile Number Should Not Be Empty.");
         document.frmpatient.mobilenumber.focus();
         return false;
     } else if (!document.frmpatient.mobilenumber.value.match(numericExpression)) {
-        alert("Mobile number not valid..");
+        alert("Mobile Number Not Valid.");
         document.frmpatient.mobilenumber.focus();
         return false;
     } else if (document.frmpatient.city.value == "") {
-        alert("City should not be empty..");
+        alert("City Should Not Be Empty.");
         document.frmpatient.city.focus();
         return false;
     } else if (!document.frmpatient.city.value.match(alphaspaceExp)) {
-        alert("City not valid..");
+        alert("City Not Valid.");
         document.frmpatient.city.focus();
         return false;
     } else if (document.frmpatient.pincode.value == "") {
-        alert("Pincode should not be empty..");
+        alert("ZIP Code Should Not Be Empty.");
         document.frmpatient.pincode.focus();
         return false;
     } else if (!document.frmpatient.pincode.value.match(numericExpression)) {
-        alert("Pincode not valid..");
+        alert("ZIP Code Not Valid.");
         document.frmpatient.pincode.focus();
         return false;
     } else if (document.frmpatient.loginid.value == "") {
-        alert("Login ID should not be empty..");
+        alert("Login ID Should Not Be Empty.");
         document.frmpatient.loginid.focus();
         return false;
     } else if (!document.frmpatient.loginid.value.match(alphanumericExp)) {
-        alert("Login ID not valid..");
+        alert("Login ID Not Valid.");
         document.frmpatient.loginid.focus();
         return false;
     } else if (document.frmpatient.password.value == "") {
-        alert("Password should not be empty..");
+        alert("Password Should Not Be Empty.");
         document.frmpatient.password.focus();
         return false;
     } else if (document.frmpatient.password.value.length < 8) {
-        alert("Password length should be more than 8 characters...");
+        alert("Password Length Should Be More Than 8 Characters.");
         document.frmpatient.password.focus();
         return false;
     } else if (document.frmpatient.password.value != document.frmpatient.confirmpassword.value) {
-        alert("Password and confirm password should be equal..");
+        alert("Confirm Password First.");
         document.frmpatient.confirmpassword.focus();
         return false;
     } else if (document.frmpatient.select2.value == "") {
-        alert("Blood Group should not be empty..");
+        alert("Blood Group Should Not Be Empty.");
         document.frmpatient.select2.focus();
         return false;
     } else if (document.frmpatient.select3.value == "") {
-        alert("Gender should not be empty..");
+        alert("Gender Should Not Be Empty.");
         document.frmpatient.select3.focus();
         return false;
     } else if (document.frmpatient.dateofbirth.value == "") {
-        alert("Date Of Birth should not be empty..");
+        alert("Date Of Birth Should Not Be Empty.");
         document.frmpatient.dateofbirth.focus();
         return false;
     } else if (document.frmpatient.select.value == "") {
-        alert("Kindly select the status..");
+        alert("Kindly Select The Status.");
         document.frmpatient.select.focus();
         return false;
     } else {

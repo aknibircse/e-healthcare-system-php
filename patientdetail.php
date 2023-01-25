@@ -5,7 +5,7 @@ if(isset($_POST['submitpat']))
 	$sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,mobileno,gender,dob) values('$_POST[patientname]','$_POST[admissiondate]','$_POST[admissiontime]','$_POST[address]','$_POST[mobilenumber]','$_POST[select]','$_POST[dateofbirth]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('patients record inserted successfully...');</script>";
+		echo "<script>alert('Patients Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -62,7 +62,7 @@ if(!isset($_GET['patientid']))
                             <div class="col-sm-3 col-xs-12">
                                 <div class="form-group drop-custum">
                                     <select class="form-control show-tick">
-                                        <option value="">-- Gender --</option>
+                                        <option value="">Gender</option>
                                         <option value="10">Male</option>
                                         <option value="20">Female</option>
                                     </select>
@@ -170,49 +170,49 @@ function validateform()
 {
 	if(document.frmpatdet.patientname.value == "")
 	{
-		alert("Patient name should not be empty..");
+		alert("Patient Name Should Not Be Empty.");
 		document.frmpatdet.patientname.focus();
 		return false;
 	}
 	else if(document.frmpatdet.patientid.value == "")
 	{
-		alert("Patient ID should not be empty..");
+		alert("Patient ID Should Not Be Empty.");
 		document.frmpatdet.patientid.focus();
 		return false;
 	}
 	else if(document.frmpatdet.admissiondate.value == "")
 	{
-		alert("Admission date should not be empty..");
+		alert("Admission Date Should Not Be Empty.");
 		document.frmpatdet.admissiondate.focus();
 		return false;
 	}
 	else if(document.frmpatdet.admissiontime.value == "")
 	{
-		alert("Admission time should not be empty..");
+		alert("Admission Time Should Not Be Empty.");
 		document.frmpatdet.admissiontime.focus();
 		return false;
 	}
 	else if(document.frmpatdet.address.value == "")
 	{
-		alert("Address should not be empty..");
+		alert("Address Should Not Be Empty.");
 		document.frmpatdet.address.focus();
 		return false;
 	}
 	else if(document.frmpatdet.select.value == "")
 	{
-		alert("Gender should not be empty..");
+		alert("Gender Should Not Be Empty.");
 		document.frmpatdet.select.focus();
 		return false;
 	}
 	else if(document.frmpatdet.mobilenumber.value == "")
 	{
-		alert("Contact number should not be empty..");
+		alert("Contact Number Should Not Be Empty.");
 		document.frmpatdet.mobilenumber.focus();
 		return false;
 	}
 	else if(document.frmpatdet.dateofbirth.value == "")
 	{
-		alert("Date Of Birth should not be empty..");
+		alert("Date Of Birth Should Not Be Empty.");
 		document.frmpatdet.dateofbirth.focus();
 		return false;
 	}

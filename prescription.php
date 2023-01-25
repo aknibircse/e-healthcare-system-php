@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE prescription SET treatment_records_id='$_POST[treatmentid]',doctorid='$_POST[select2]',patientid='$_POST[patientid]',prescriptiondate='$_POST[date]',status='$_POST[select]' WHERE prescription_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('prescription record updated successfully...');</script>";
+			echo "<script>alert('Prescription Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -140,26 +140,26 @@ function validateform()
 {
 	if(document.frmpres.select2.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmpres.select2.focus();
 		return false;
 	}
 	
 	else if(document.frmpres.select3.value == "")
 	{
-		alert("Patient name should not be empty..");
+		alert("Patient Name Should Not Be Empty.");
 		document.frmpres.select3.focus();
 		return false;
 	}
 	else if(document.frmpres.date.value == "")
 	{
-		alert("Prescription date should not be empty..");
+		alert("Prescription Date Should Not Be Empty.");
 		document.frmpres.date.focus();
 		return false;
 	}
 	else if(document.frmpres.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmpres.select.focus();
 		return false;
 	}

@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
 	else
 	{
 		$err = "<div class='alert alert-danger'>
-		<strong>Oh !</strong> Change a few things up and try submitting again.
+		<strong>Oh !</strong> Change A Few Things Up And Try Submitting Again.
 	</div>";
 	}
 }
@@ -105,25 +105,25 @@ function validateform()
 {
 	 if(document.frmdoctlogin.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID Should Not Be Empty.");
 		document.frmdoctlogin.loginid.focus();
 		return false;
 	}
 	else if(!document.frmdoctlogin.loginid.value.match(alphanumericExp))
 	{
-		alert("Login ID not valid..");
+		alert("Login ID Not Valid.");
 		document.frmdoctlogin.loginid.focus();
 		return false;
 	}
 	else if(document.frmdoctlogin.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password Should Not Be Empty.");
 		document.frmdoctlogin.password.focus();
 		return false;
 	}
 	else if(document.frmdoctlogin.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password Length Should Be More Than 8 Characters.");
 		document.frmdoctlogin.password.focus();
 		return false;
 	}

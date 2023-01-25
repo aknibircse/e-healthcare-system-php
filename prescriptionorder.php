@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE prescription SET treatment_records_id='$_POST[treatmentid]',doctorid='$_POST[select2]',patientid='$_POST[patientid]',prescriptiondate='$_POST[date]',status='$_POST[select]' WHERE prescription_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('prescription record updated successfully...');</script>";
+			echo "<script>alert('Prescription Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -61,7 +61,7 @@ if(isset($_GET['orderid']))
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>Add new prescription record</h1>
+    <h1>Add New Prescription Record</h1>
      <form method="post" action="" name="frmpres" onSubmit="return validateform()">
      <input type="hidden" name="patientid" value="<?php echo $rsorder['patientid']; ?>"  />
      

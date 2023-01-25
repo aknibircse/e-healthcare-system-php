@@ -116,7 +116,7 @@ label.form-label {
 		
 			<div class="heading">
 				<h2>Please Enter Patients Details</h2>
-				<p>Fill the form below and submit your query we will contact you as soon as possible.</p>
+				<p>Fill The Form Below And Submit Your Query We Will Contact You As Soon As Possible.</p>
 			</div>
 		
 			<div class="agile-form">

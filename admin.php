@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<div class='alert alert-success' style='text-align:center;'>
-			Admin Record updated successfully
+			Admin Record Updated Successfully.
 			</div>";
 		}
 		else
@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<div class='alert alert-success'>
-			Admin Record Inserted successfully
+			Admin Record Inserted successfully.
 			</div>";
 		}
 		else
@@ -149,49 +149,49 @@ function validateform()
 {
 	if(document.frmadmin.adminname.value == "")
 	{
-		alert("Admin name should not be empty..");
+		alert("Admin Name Should Not Be Empty.");
 		document.frmadmin.adminname.focus();
 		return false;
 	}
 	else if(!document.frmadmin.adminname.value.match(alphaspaceExp))
 	{
-		alert("Admin name not valid..");
+		alert("Admin Name Not Valid.");
 		document.frmadmin.adminname.focus();
 		return false;
 	}
 	else if(document.frmadmin.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("LogIn ID Should Not Be Empty.");
 		document.frmadmin.loginid.focus();
 		return false;
 	}
 	else if(!document.frmadmin.loginid.value.match(alphanumericExp))
 	{
-		alert("Login ID not valid..");
+		alert("Login ID Not Valid.");
 		document.frmadmin.loginid.focus();
 		return false;
 	}
 	else if(document.frmadmin.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password Should Not Be Empty.");
 		document.frmadmin.password.focus();
 		return false;
 	}
 	else if(document.frmadmin.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password Length Should Be More Than 8 Characters.");
 		document.frmadmin.password.focus();
 		return false;
 	}
 	else if(document.frmadmin.password.value != document.frmadmin.cnfirmpassword.value )
 	{
-		alert("Password and confirm password should be equal..");
+		alert("Confirm Password First.");
 		document.frmadmin.password.focus();
 		return false;
 	}
 	else if(document.frmadmin.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmadmin.select.focus();
 		return false;
 	}

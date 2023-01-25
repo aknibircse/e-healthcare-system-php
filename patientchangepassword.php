@@ -10,14 +10,14 @@ if(isset($_POST['submit']))
 	if(mysqli_affected_rows($con) == 1)
 	{
 		echo "<div class='alert alert-success'>
-                            Password has been updated successfully
+                            Password Has Been Updated Successfully
                         </div>
-                        <script>alert('..');</script>";
+                        <script>alert('.');</script>";
 	}
 	else
 	{
 		echo "<div class='alert alert-danger'>
-                            Update Failed
+                            Update Failed.
                         </div>
                        ";		
 	}
@@ -26,7 +26,7 @@ if(isset($_POST['submit']))
 
 <div class="container-fluid">
     <div class="block-header">
-        <h2 class="text-center"> Patient's Password</h2>
+        <h2 class="text-center">Patient's Password</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -73,25 +73,25 @@ function validateform()
 {
 	if(document.frmpatchange.oldpassword.value == "")
 	{
-		alert("Old password should not be empty..");
+		alert("Old Password Should Not Be Empty.");
 		document.frmpatchange.oldpassword.focus();
 		return false;
 	}
 	else if(document.frmpatchange.newpassword.value == "")
 	{
-		alert("New Password should not be empty..");
+		alert("New Password Should Not Be Empty.");
 		document.frmpatchange.newpassword.focus();
 		return false;
 	}
 	else if(document.frmpatchange.newpassword.value.length < 6)
 	{
-		alert("New Password length should be more than 6 characters...");
+		alert("New Password Length Should Be More Than 6 Characters.");
 		document.frmpatchange.newpassword.focus();
 		return false;
 	}
 	else if(document.frmpatchange.newpassword.value != document.frmpatchange.password.value )
 	{
-		alert(" New Password and confirm password should be equal..");
+		alert("Confirm Password First.");
 		document.frmpatchange.password.focus();
 		return false;
 	}

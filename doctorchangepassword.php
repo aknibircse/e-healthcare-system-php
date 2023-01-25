@@ -12,14 +12,14 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
-		echo "<script>alert('Failed to update password..');</script>";		
+		echo "<script>alert('Failed To Update Password.');</script>";		
 	}
 }
 ?>
 
 <div class="container-fluid">
     <div class="block-header">
-        <h2 class="text-center"> Doctor's Password</h2>
+        <h2 class="text-center">Doctor's Password</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -63,19 +63,19 @@ include("adfooter.php");
 <script type="application/javascript">
 function validateform1() {
     if (document.frmdoctchangepass.oldpassword.value == "") {
-        alert("Old password should not be empty..");
+        alert("Old Password Should Not be Empty.");
         document.frmdoctchangepass.oldpassword.focus();
         return false;
     } else if (document.frmdoctchangepass.newpassword.value == "") {
-        alert("New Password should not be empty..");
+        alert("New Password Should Not be Empty.");
         document.frmdoctchangepass.newpassword.focus();
         return false;
     } else if (document.frmdoctchangepass.newpassword.value.length < 8) {
-        alert("New Password length should be more than 8 characters...");
+        alert("New Password Length Should Be More Than 8 Characters.");
         document.frmdoctchangepass.newpassword.focus();
         return false;
     } else if (document.frmdoctchangepass.newpassword.value != document.frmdoctchangepass.password.value) {
-        alert(" New Password and confirm password should be equal..");
+        alert("Confirm Password First.");
         document.frmdoctchangepass.password.focus();
         return false;
     } else {

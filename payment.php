@@ -44,7 +44,7 @@ $billappointmentid = $_GET['appointmentid'];
     <table width="515" border="3">
      <thead>
         <tr>
-          <th colspan="2">&nbsp;Add payment details.. </th>
+          <th colspan="2">&nbsp;Add Payment Details.</th>
           </tr>
           </thead>
            <tbody>

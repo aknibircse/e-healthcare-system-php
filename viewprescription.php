@@ -7,7 +7,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('prescription deleted successfully..');</script>";
+		echo "<script>alert('Prescription Deleted Successfully.');</script>";
 	}
 }
 ?>
@@ -20,7 +20,7 @@ if(isset($_GET['delid']))
 </div>
 <div class="wrapper col4">
   <div id="container">
-    <h1>View prescription record</h1>
+    <h1>View Prescription Record</h1>
 <?php
 $sql ="SELECT * FROM prescription";
 $qsql = mysqli_query($con,$sql);
@@ -55,7 +55,7 @@ while($rs = mysqli_fetch_array($qsql))
           </tbody>
         </table>
         
-      <h1>View Prescription record</h1>
+      <h1>View Prescription Record</h1>
         <table width="200" border="3">
           <tbody>
             <tr>

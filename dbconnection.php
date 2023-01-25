@@ -5,6 +5,6 @@ $con=mysqli_connect("localhost","root","","oHMSphp");
 // Check connection
 if (!$con)
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  echo "Failed To Connect With MySQL: " . mysqli_connect_error();
   }
 ?>

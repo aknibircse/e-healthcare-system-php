@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
 		$sql ="UPDATE doctor SET doctorname='$_POST[doctorname]',mobileno='$_POST[mobilenumber]',departmentid='$_POST[select3]',loginid='$_POST[loginid]',education='$_POST[education]',experience='$_POST[experience]',consultancy_charge='$_POST[consultancy_charge]' WHERE doctorid='$_SESSION[doctorid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor profile updated successfully...');</script>";
+			echo "<script>alert('Doctor Profile Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -21,7 +21,7 @@ if(isset($_POST['submit']))
 		$sql ="INSERT INTO doctor(doctorname,mobileno,departmentid,loginid,password,status,education,experience) values('$_POST[doctorname]','$_POST[mobilenumber]','$_POST[select3]','$_POST[loginid]','$_POST[password]','$_POST[select]','$_POST[education]','$_POST[experience]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor record inserted successfully...');</script>";
+			echo "<script>alert('Doctor Record Inserted Successfully.');</script>";
 		}
 		else
 		{
@@ -39,7 +39,7 @@ if(isset($_SESSION['doctorid']))
 ?>
 <div class="container-fluid">
     <div class="block-header">
-        <h2 class="text-center"> Doctor's Profile</h2>
+        <h2 class="text-center">Doctor's Profile</h2>
     </div>
     <div class="row clearfix">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -122,7 +122,7 @@ if(isset($_SESSION['doctorid']))
                         </div>
                         <div class="col-sm-4 col-xs-12">
                             <div class="form-group">
-                                <label>Consultancy charge</label>
+                                <label>Consultancy Charge</label>
                                 <div class="form-line">
 
                                     <input class="form-control" type="text" name="consultancy_charge"
@@ -155,63 +155,63 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 
 function validateform() {
     if (document.frmdoctprfl.doctorname.value == "") {
-        alert("Doctor name should not be empty..");
+        alert("Doctor Name Should Not Be Empty.");
         document.frmdoctprfl.doctorname.focus();
         return false;
     } else if (!document.frmdoctprfl.doctorname.value.match(alphaspaceExp)) {
-        alert("Doctor name not valid..");
+        alert("Doctor Name Not Valid.");
         document.frmdoctprfl.doctorname.focus();
         return false;
     } else if (document.frmdoctprfl.mobilenumber.value == "") {
-        alert("Mobile number should not be empty..");
+        alert("Mobile Number Should Not Be Empty.");
         document.frmdoctprfl.mobilenumber.focus();
         return false;
     } else if (!document.frmdoctprfl.mobilenumber.value.match(numericExpression)) {
-        alert("Mobile number not valid..");
+        alert("Mobile Number Not Valid.");
         document.frmdoctprfl.mobilenumber.focus();
         return false;
     } else if (document.frmdoctprfl.select3.value == "") {
-        alert("Department ID should not be empty..");
+        alert("Department ID Should Not Be Empty.");
         document.frmdoctprfl.select3.focus();
         return false;
     } else if (document.frmdoctprfl.loginid.value == "") {
-        alert("Login ID should not be empty..");
+        alert("Login ID Should Not Be Empty.");
         document.frmdoctprfl.loginid.focus();
         return false;
     } else if (!document.frmdoctprfl.loginid.value.match(alphanumericExp)) {
-        alert("loginid not valid..");
+        alert("Login ID Not Valid.");
         document.frmdoctprfl.loginid.focus();
         return false;
     } else if (document.frmdoctprfl.password.value == "") {
-        alert("Password should not be empty..");
+        alert("Password Should Not Be Empty.");
         document.frmdoctprfl.password.focus();
         return false;
     } else if (document.frmdoctprfl.password.value.length < 8) {
-        alert("Password length should be more than 8 characters...");
+        alert("Password Length Should Be More Than 8 Characters.");
         document.frmdoctprfl.password.focus();
         return false;
     } else if (document.frmdoctprfl.password.value != document.frmdoctprfl.cnfirmpassword.value) {
-        alert("Password and confirm password should be equal..");
+        alert("Confirm Password First.");
         document.frmdoctprfl.password.focus();
         return false;
     } else if (document.frmdoctprfl.education.value == "") {
-        alert("Education should not be empty..");
+        alert("Education Should Not Be Empty.");
         document.frmdoctprfl.education.focus();
         return false;
     } else if (!document.frmdoctprfl.education.value.match(alphaExp)) {
-        alert("Education not valid..");
+        alert("Education Not Valid.");
         document.frmdoctprfl.education.focus();
         return false;
     } else if (document.frmdoctprfl.experience.value == "") {
-        alert("Experience should not be empty..");
+        alert("Experience Should Not Be Empty.");
         document.frmdoctprfl.experience.focus();
         return false;
     } else if (!document.frmdoctprfl.experience.value.match(numericExpression)) {
-        alert("Experience not valid..");
+        alert("Experience Not Valid.");
         document.frmdoctprfl.experience.focus();
         return false;
     } else if (document.frmdoctprfl.select.value == "") {
-        alert("Kindly select the status..");
+        alert("Kindly Select The Status.");
         document.frmdoctprfl.select.focus();
         return false;
     } else {

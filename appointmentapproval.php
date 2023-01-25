@@ -159,43 +159,43 @@ function validateform()
 {
 	if(document.frmappnt.select4.value == "")
 	{
-		alert("Patient name should not be empty..");
+		alert("Patient Name Should Not Be Empty.");
 		document.frmappnt.select4.focus();
 		return false;
 	}
 	else if(document.frmappnt.select3.value == "")
 	{
-		alert("Room type should not be empty..");
+		alert("Room Type Should Not Be Empty.");
 		document.frmappnt.select3.focus();
 		return false;
 	}
 	else if(document.frmappnt.select5.value == "")
 	{
-		alert("Department name should not be empty..");
+		alert("Department Name Should Not Be Empty.");
 		document.frmappnt.select5.focus();
 		return false;
 	}
 	else if(document.frmappnt.appointmentdate.value == "")
 	{
-		alert("Appointment date should not be empty..");
+		alert("Appointment Date Should Not Be Empty.");
 		document.frmappnt.appointmentdate.focus();
 		return false;
 	}
 	else if(document.frmappnt.time.value == "")
 	{
-		alert("Appointment time should not be empty..");
+		alert("Appointment Time Should Not Be Empty.");
 		document.frmappnt.time.focus();
 		return false;
 	}
 	else if(document.frmappnt.select6.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmappnt.select6.focus();
 		return false;
 	}
 	else if(document.frmappnt.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmappnt.select.focus();
 		return false;
 	}

@@ -37,7 +37,7 @@ if(isset($_SESSION['doctorid']))
 	<table>
 		<tr>
 			<td>
-			<div align="center"><a href="prescription.php?patientid=<?php echo $_GET['patientid']; ?>&appid=<?php echo $rsappointment['appointmentid']; ?>">Add Prescription records</a></div>
+			<div align="center"><a href="prescription.php?patientid=<?php echo $_GET['patientid']; ?>&appid=<?php echo $rsappointment['appointmentid']; ?>">Add Prescription Records</a></div>
 			</td>
 		</tr>
 	</table>

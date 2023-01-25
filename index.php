@@ -22,7 +22,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.4" 
                 data-endspeed="300"
-                style="z-index: 5; font-size:50px; font-weight:500; color:black;  max-width: auto; max-height: auto; white-space: nowrap;">E-healthcare System</div>
+                style="z-index: 5; font-size:50px; font-weight:500; color:black;  max-width: auto; max-height: auto; white-space: nowrap;">E-Healthcare System</div>
             
             <!-- LAYER NR. 2 -->
             <div class="tp-caption sfr tp-resizeme" 
@@ -36,7 +36,7 @@
                 data-elementdelay="0.03" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 6; font-size:40px; color:gray; font-weight:500; white-space: nowrap;">We care about your health </div>
+                style="z-index: 6; font-size:40px; color:gray; font-weight:500; white-space: nowrap;">We Care About Your Health </div>
             
             <!-- LAYER NR. 3 -->
             <div class="tp-caption sfb tp-resizeme" 
@@ -50,7 +50,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7;  font-size:22px; color:gray; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">Best E-Healthcare Services ever</div>
+                style="z-index: 7;  font-size:22px; color:gray; font-weight:500; max-width: auto; max-height: auto; white-space: nowrap;">Best E-Healthcare Services Ever</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 
@@ -111,7 +111,7 @@
                 data-elementdelay="0.1" 
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
-                style="z-index: 7; font-size:16px; color:#000; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">Improved diagnostic performance and heightened satisfaction of patients <br> and physicians delight.</div>
+                style="z-index: 7; font-size:16px; color:#000; font-weight:500; line-height:26px; max-width: auto; max-height: auto; white-space: nowrap;">Improved Diagnostic Performance And Heightened Satisfaction Of Patients <br> and Physicians Delight.</div>
             
             <!-- LAYER NR. 4 -->
             <div class="tp-caption lfb tp-resizeme scroll" 
@@ -156,8 +156,8 @@
                 data-endelementdelay="0.1" 
                 data-endspeed="300" 
                 data-scrolloffset="0"
-                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">We work in a friendly and efficient using the latest <br>
-              technologies and sharing our expertise.</div>
+                style="z-index: 7; font-size:20px; font-weight:500; line-height:26px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">We Work In A Friendly And Efficient Using The Latest <br>
+              Technologies And Sharing Our Expertise.</div>
           </li>
         </ul>
       </div>
@@ -230,7 +230,7 @@
         <div class="heading-block">
           <h2>Our Services</h2>
           <hr>
-          <span>Our E-healthcare System (EHS) is a comprehensive software solution that helps in streamlining the day-to-day activities of a hospital. It is designed to help healthcare providers, administrators, and healthcare professionals in managing their operations more efficiently. With HMS, hospitals can keep track of patient information, billing and accounts, store medical records, and schedule appointments. It also allows users to access medical reports, track patient vitals, and monitor patient health.</span> </div>
+          <span>Our E-healthcare System (EHS) is a comprehensive software solution that helps in streamlining the day-to-day activities of Telemedicine. It is designed to help healthcare providers, administrators, and healthcare professionals in managing their operations more efficiently. With EHS, E-Healthcare Solution can keep track of patient information, billing and accounts, store medical records, and schedule appointments. It also allows users to access medical reports, track patient vitals, and monitor patient health.</span> </div>
         
         <!-- Services -->
         <div class="services">

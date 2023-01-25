@@ -7,7 +7,7 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('appointment record deleted successfully..');</script>";
+		echo "<script>alert('Appointment Record Deleted Successfully.');</script>";
 	}
 }
 if(isset($_GET['approveid']))
@@ -16,13 +16,13 @@ if(isset($_GET['approveid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-		echo "<script>alert('Appointment record Approved successfully..');</script>";
+		echo "<script>alert('Appointment Record Approved Successfully.');</script>";
 	}
 }
 ?>
 <div class="container-fluid">
   <div class="block-header">
-    <h2 class="text-center">View Appointment records</h2>
+    <h2 class="text-center">View Appointment Records</h2>
 
   </div>
 

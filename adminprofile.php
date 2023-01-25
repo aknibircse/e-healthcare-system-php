@@ -77,7 +77,7 @@ if(isset($_SESSION['adminid']))
                             <div class="col-sm-3 col-xs-12">
                                 <div class="form-group drop-custum">
                                     <select class="form-control show-tick">
-                                        <option value="" selected>-- Status --</option>
+                                        <option value="" selected>Status</option>
                                         <?php
 										$arr = array("Active","Inactive");
 										foreach($arr as $val)

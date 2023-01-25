@@ -39,7 +39,7 @@ $tim = date("H:i:s");
                     </div>
                 </div>
             </div>
-            <p>Please wait...</p>
+            <p>Please Wait.</p>
         </div>
     </div>
     <!-- #END# Page Loader -->
@@ -53,7 +53,7 @@ $tim = date("H:i:s");
     <nav class="navbar clearHeader">
         <div class="col-12">
             <div class="navbar-header"> <a href="javascript:void(0);" class="bars"></a> <a class="navbar-brand"
-                    href="#">E-healthcare System</a> </div>
+                    href="#">E-Healthcare System</a> </div>
             <ul class="nav navbar-nav navbar-right">
                 <!-- Notifications -->
                 <li>

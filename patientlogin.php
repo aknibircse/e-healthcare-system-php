@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
 	else
 	{
 		$err = "<div class='alert alert-danger'>
-		<strong>Oh !</strong> Change a few things up and try submitting again.
+		<strong>Oh !</strong> Change A Few Things Up And Try Submitting Again.
 	</div>";
 	}
 }
@@ -57,7 +57,7 @@ if(isset($_POST['submit']))
 ?></div>
     <div class="card-top"></div>
     <div class="card">
-        <h1 class="title"><span>E-healthcare System</span>Login <span class="msg">Hello, Patient!</span></h1>
+        <h1 class="title"><span>E-Healthcare System</span>Login <span class="msg">Hello, Patient!</span></h1>
         <div class="col-md-12">
 
     <form method="post" action="" name="frmadminlogin" id="sign_in" onSubmit="return validateform()">
@@ -97,19 +97,19 @@ function validateform()
 {
 	if(document.frmpatlogin.loginid.value == "")
 	{
-		alert("Login ID should not be empty..");
+		alert("Login ID Should Not Be Empty.");
 		document.frmpatlogin.loginid.focus();
 		return false;
 	}
 	else if(document.frmpatlogin.password.value == "")
 	{
-		alert("Password should not be empty..");
+		alert("Password Should Not Be Empty.");
 		document.frmpatlogin.password.focus();
 		return false;
 	}
 	else if(document.frmpatlogin.password.value.length < 8)
 	{
-		alert("Password length should be more than 8 characters...");
+		alert("Password Length Should Be More Than 8 Characters.");
 		document.frmpatlogin.password.focus();
 		return false;
 	}

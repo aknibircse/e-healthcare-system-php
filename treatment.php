@@ -133,15 +133,15 @@ var alphanumericExp = /^[0-9a-zA-Z]+$/; 									/* Variable to Validate Numbers
 var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; 		/* Variable to Validate Email ID */
 function validateform() {
 	if (document.frmtreat.treatmenttype.value == "") {
-		alert("Treatment type should not be empty.");
+		alert("Treatment Type Should Not Be Empty.");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (!document.frmtreat.treatmenttype.value.match(alphaspaceExp)) {
-		alert("Treatment type not valid.");
+		alert("Treatment Type Not Valid.");
 		document.frmtreat.treatmenttype.focus();
 		return false;
 	} else if (document.frmtreat.select.value == "") {
-		alert("Kindly select the status.");
+		alert("Kindly Select The Status.");
 		document.frmtreat.select.focus();
 		return false;
 	} else {

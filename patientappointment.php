@@ -28,14 +28,14 @@ if(isset($_POST['submit']))
 	$qsqlappointment = mysqli_query($con,$sqlappointment);
 	if(mysqli_num_rows($qsqlappointment) >= 1)
 	{
-		echo "<script>alert('Appointment already scheduled for this time..');</script>";
+		echo "<script>alert('Appointment Already Scheduled For This Time.');</script>";
 	}
 	else
 	{
 		$sql ="INSERT INTO appointment(appointmenttype,patientid,appointmentdate,appointmenttime,app_reason,status,departmentid,doctorid) values('ONLINE','$lastinsid','$_POST[appointmentdate]','$_POST[appointmenttime]','$_POST[app_reason]','Pending','$_POST[department]','$_POST[doct]')";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Appointment record inserted successfully...');</script>";
+			echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
 		}
 		else
 		{
@@ -68,20 +68,20 @@ if(isset($_SESSION['patientid']))
         {
            if(mysqli_num_rows($qsqlappointment) >= 1)
            {		
-             echo "<h2>Appointment already scheduled for ". date("d-M-Y", strtotime($_POST['appointmentdate'])) . " " . date("H:i A", strtotime($_POST['appointmenttime'])) . " .. </h2>";
+             echo "<h2>Appointment Already Scheduled For ". date("d-M-Y", strtotime($_POST['appointmentdate'])) . " " . date("H:i A", strtotime($_POST['appointmenttime'])) . " .</h2>";
          }
          else
          {
           if(isset($_SESSION['patientid']))
           {
-             echo "<h2 class='text-center'>Appointment taken successfully.. </h2>";
-             echo "<p class='text-center'>Appointment record is in pending process. Kinldy check the appointment status. </p>";
-             echo "<p class='text-center'> <a href='viewappointment.php'>View Appointment record</a>. </p>";			
+             echo "<h2 class='text-center'>Appointment Taken Successfully. </h2>";
+             echo "<p class='text-center'>Appointment Record Is In Pending Process. Kinldy Check The Appointment Status. </p>";
+             echo "<p class='text-center'> <a href='viewappointment.php'>View Appointment Record</a>. </p>";			
          }
          else
          {
              echo "<h2 class='text-center'>Appointment Taken Successfully.</h2>";
-             echo "<p class='text-center'>Appointment Record is Pending in Process. Please Wait for Confirmation Message.</p>";
+             echo "<p class='text-center'>Appointment Record Is Pending In Process. Please Wait For Confirmation Message.</p>";
              echo "<p class='text-center'> <a href='patientaccount.php'>Back to Dashboard</a>. </p>";	
          }
      }
@@ -204,7 +204,7 @@ if(isset($_SESSION['patientid']))
                                         </li>
                                         <li class="col-sm-6">
                                             <label>
-                                                <input placeholder="Date of birth" type="text" class="form-control"
+                                                <input placeholder="Date of Birth" type="text" class="form-control"
                                                     name="dob" id="dob" onfocus="(this.type='date')"
                                                     value="<?php echo $rspatient['dob']; ?>" <?php echo $readonly; ?>><i
                                                     class="ion-calendar"></i>
@@ -276,10 +276,10 @@ if(isset($_SESSION['patientid']))
                                         <li class="col-sm-12">
                                             <label>
                                                 <textarea class="form-control" name="app_reason"
-                                                    placeholder="Appointment reason"></textarea>
+                                                    placeholder="Appointment Reason"></textarea>
                                             </label>
                                         </li>
-                                        <li class="col-sm-12">
+                                        <li class="col-sm-12" style="text-align: right;">
                                             <button type="submit" class="btn" name="submit" id="submit">
                                             make an appointment</button>
                                         </li>
@@ -314,63 +314,63 @@ var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/; //Variable t
 
 function validateform() {
     if (document.frmpatapp.patiente.value == "") {
-        alert("Patient name should not be empty..");
+        alert("Patient Name Should Not Be Empty.");
         document.frmpatapp.patiente.focus();
         return false;
     } else if (!document.frmpatapp.patiente.value.match(alphaspaceExp)) {
-        alert("Patient name not valid..");
+        alert("Patient Name Not Valid.");
         document.frmpatapp.patiente.focus();
         return false;
     } else if (document.frmpatapp.textarea.value == "") {
-        alert("Address should not be empty..");
+        alert("Address Should Not Be Empty.");
         document.frmpatapp.textarea.focus();
         return false;
     } else if (document.frmpatapp.city.value == "") {
-        alert("City should not be empty..");
+        alert("City Should Not Be Empty.");
         document.frmpatapp.city.focus();
         return false;
     } else if (!document.frmpatapp.city.value.match(alphaspaceExp)) {
-        alert("City name not valid..");
+        alert("City Name Not Valid.");
         document.frmpatapp.city.focus();
         return false;
     } else if (document.frmpatapp.mobileno.value == "") {
-        alert("Mobile number should not be empty..");
+        alert("Mobile Number Should Not Be Empty.");
         document.frmpatapp.mobileno.focus();
         return false;
     } else if (!document.frmpatapp.mobileno.value.match(numericExpression)) {
-        alert("Mobile number not valid..");
+        alert("Mobile Number Not Valid.");
         document.frmpatapp.mobileno.focus();
         return false;
     } else if (document.frmpatapp.loginid.value == "") {
-        alert("login ID should not be empty..");
+        alert("Login ID Should Not Be Empty.");
         document.frmpatapp.loginid.focus();
         return false;
     } else if (!document.frmpatapp.loginid.value.match(alphanumericExp)) {
-        alert("login ID not valid..");
+        alert("login ID Not Valid.");
         document.frmpatapp.loginid.focus();
         return false;
     } else if (document.frmpatapp.password.value == "") {
-        alert("Password should not be empty..");
+        alert("Password Should Not Be Empty.");
         document.frmpatapp.password.focus();
         return false;
     } else if (document.frmpatapp.password.value.length < 8) {
-        alert("Password length should be more than 8 characters...");
+        alert("Password Length Should Be More Than 8 Characters.");
         document.frmpatapp.password.focus();
         return false;
     } else if (document.frmpatapp.select6.value == "") {
-        alert("Gender should not be empty..");
+        alert("Gender Should Not Be Empty.");
         document.frmpatapp.select6.focus();
         return false;
     } else if (document.frmpatapp.dob.value == "") {
-        alert("Date Of Birth should not be empty..");
+        alert("Date Of Birth Should Not Be Empty.");
         document.frmpatapp.dob.focus();
         return false;
     } else if (document.frmpatapp.appointmentdate.value == "") {
-        alert("Appointment date should not be empty..");
+        alert("Appointment Date Should Not Be Empty.");
         document.frmpatapp.appointmentdate.focus();
         return false;
     } else if (document.frmpatapp.appointmenttime.value == "") {
-        alert("Appointment time should not be empty..");
+        alert("Appointment Time Should Not Be Empty.");
         document.frmpatapp.appointmenttime.focus();
         return false;
     } else {

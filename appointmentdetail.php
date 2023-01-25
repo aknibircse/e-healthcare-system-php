@@ -6,7 +6,7 @@ if(isset($_POST['submitapp']))
 	$sql ="INSERT INTO appointment(appointmenttype,roomid,departmentid,appointmentdate,appointmenttime,doctorid) values('$_POST[select]','$_POST[select2]','$_POST[select3]','$_POST[date]','$_POST[time]','$_POST[select5]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('appointment Record Inserted Successfully.');</script>";
+		echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -32,7 +32,7 @@ if(isset($_GET['editid']))
 	
 if(mysqli_num_rows($qsqlappointment) == 0)
 {
-	echo "<center><h2>No Appointment records found..</h2></center>";
+	echo "<center><h2>No Appointment Records Found.</h2></center>";
 }
 else
 {
@@ -81,37 +81,37 @@ function validateform()
 	
 	if(document.frmappntdetail.select.value == "")
 	{
-		alert("Appointment type should not be empty..");
+		alert("Appointment Type Should Not Be Empty.");
 		document.frmappntdetail.select.focus();
 		return false;
 	}
 	else if(document.frmappntdetail.select2.value == "")
 	{
-		alert("Room type should not be empty..");
+		alert("Room ype Should Not Be Empty.");
 		document.frmappntdetail.select2.focus();
 		return false;
 	}
 	else if(document.frmappntdetail.select3.value == "")
 	{
-		alert("Department name should not be empty..");
+		alert("Department Name Should Not Be Empty.");
 		document.frmappntdetail.select3.focus();
 		return false;
 	}
 	else if(document.frmappntdetail.date.value == "")
 	{
-		alert("Appointment date should not be empty..");
+		alert("Appointment Date Should Not Be Empty.");
 		document.frmappntdetail.date.focus();
 		return false;
 	}
 	else if(document.frmappntdetail.time.value == "")
 	{
-		alert("Appointment time should not be empty..");
+		alert("Appointment Time Should Not Be Empty.");
 		document.frmappntdetail.time.focus();
 		return false;
 	}
 	else if(document.frmappntdetail.select5.value == "")
 	{
-		alert("Doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmappntdetail.select5.focus();
 		return false;
 	}

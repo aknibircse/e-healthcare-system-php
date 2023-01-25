@@ -1,4 +1,4 @@
-  <footer class="footer-2">
+<footer class="footer-2">
     <div class="container">
       <div class="row"> 
         
@@ -16,15 +16,15 @@
         <div class="col-sm-5">
           <div class="con-info">
             <h6>Contact Us</h6>
-            <p>Daffodil Smart City, Ashulia, Savar, Dhaka.</p>
+            <p><img src="images/location-icon.png" height="16px" width="16px" style="padding-bottom: 3px;">&nbsp;Daffodil Smart City, Ashulia, Savar, Dhaka.</p>
             <ul>
               <li class="mobile">
-                <p> +880 1628236296 <br>
-                +880 1750490791</p>
+                <p><img src="images/phone-icon.png" height="16px" width="16px" style="padding-bottom: 3px;">&nbsp;+880 1628236296 <br>
+                <img src="images/phone-icon.png" height="16px" width="16px" style="padding-bottom: 3px;">&nbsp;+880 1750490791</p>
               </li>
               <li class="email">
-                <p>taslima15-2561@diu.edu.bd <br>
-                taslima2561.cse@gmail.com</p>
+                <p><img src="images/mail-icon.png" height="16px" width="16px" style="padding-bottom: 3px;">&nbsp;taslima15-2561@diu.edu.bd <br>
+                <img src="images/mail-icon.png" height="16px" width="16px" style="padding-bottom: 3px;">&nbsp;taslima2561.cse@gmail.com</p>
                 </li>
             </ul>
           </div>

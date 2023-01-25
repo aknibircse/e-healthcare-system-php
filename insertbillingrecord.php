@@ -67,7 +67,7 @@ if($billtype == "Prescription charge")
 	$qsqltreatment = mysqli_query($con,$sqltreatment);
 	$rstreatment = mysqli_fetch_array($qsqltreatment);
 	//Prescription charge
-	 $sql ="INSERT INTO billing_records(billingid, bill_type_id, bill_type, bill_amount, bill_date, status) VALUES ('$billid','$prescriptionid','Prescription Charge','$presamt','$dt','Active')";
+	 $sql ="INSERT INTO billing_records(billingid, bill_type_id, bill_type, bill_amount, bill_date, status) VALUES ('$billid','prescriptionid','Prescription Charge','presamt','$dt','Active')";
 	$qsql=mysqli_query($con,$sql);
 }
 
@@ -84,7 +84,7 @@ if($billtype == "Prescription update")
 if($billtype == "Consultancy Charge")
 {
 //Consultancy Charge
-$sql ="INSERT INTO billing_records( billingid, bill_type_id, bill_type, bill_amount, bill_date, status) VALUES ('$billid','doctorid','Consultancy Charge','$billamt','$dt','Active')";
+$sql ="INSERT INTO billing_records( billingid, bill_type_id, bill_type, bill_amount, bill_date, status) VALUES ('$billid','doctorid','Consultancy Charge','billamt','$dt','Active')";
 $qsql=mysqli_query($con,$sql);
 }
 
@@ -97,6 +97,6 @@ if($billtype == "Service Charge")
 	//Prescription charge
 	$sql ="INSERT INTO billing_records( billingid, bill_type_id, bill_type, bill_amount, bill_date, status) VALUES ('$billid','servicetypeid','Service Charge','$servicecharge','$_POST[date]','Active')";
 	$qsql=mysqli_query($con,$sql);
-	echo "<script>alert('Service charge added successfully..');</script>";
+	echo "<script>alert('Service Charge Added Successfully.');</script>";
 }
 ?>

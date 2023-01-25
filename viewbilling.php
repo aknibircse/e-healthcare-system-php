@@ -22,7 +22,7 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
  	<table class="table table-bordered table-striped">
       <tbody>
         <tr>
-          <th scope="col"><div align="right">Bill number &nbsp; </div></th>
+          <th scope="col"><div align="right">Bill Number &nbsp; </div></th>
           <td> <?php echo '#E-Healthcare--'.$rsbilling_records['billingid']; ?></td>
         </tr>
         <tr>
@@ -37,7 +37,7 @@ $rsbilling_records = mysqli_fetch_array($qsqlbilling_records);
 	    </tr>
         
 		<tr>
-		  <th scope="col"><div align="right">Billing time&nbsp; </div></th>
+		  <th scope="col"><div align="right">Billing Time &nbsp; </div></th>
 		  <td>&nbsp;<?php echo $rsbilling_records['billingtime'] ; ?></td>
 	    </tr>
       </tbody>

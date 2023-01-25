@@ -14,7 +14,7 @@ if(isset($_GET['delid']))
 ?>
 <div class="container-fluid">
 	<div class="block-header">
-		<h2 class="text-center">View Doctor consultancy charges</h2>
+		<h2 class="text-center">View Doctor Consultancy Charges</h2>
 
 	</div>
 

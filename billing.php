@@ -74,109 +74,109 @@ function validateform()
 {
 	if(document.frmbill.treatment.value == "")
 	{
-		alert("Treatment Type should not be empty..");
+		alert("Treatment Type Should Not Be Empty.");
 		document.frmbill.treatment.focus();
 		return false;
 	}
 	else if(!document.frmbill.treatment.value.match(alphaspaceExp))
 	{
-		alert("Treatment Type not valid..");
+		alert("Treatment Type Not Valid.");
 		document.frmbill.treatment.focus();
 		return false;
 	}
 	else if(document.frmbill.date.value == "")
 	{
-		alert("Billing Date should not be empty..");
+		alert("Billing Date Should Not Be Empty.");
 		document.frmbill.date.focus();
 		return false;
 	}
 	else if(document.frmbill.time.value == "")
 	{
-		alert("Billing Time should not be empty..");
+		alert("Billing Time Should Not Be Empty.");
 		document.frmbill.time.focus();
 		return false;
 	}
 	else if(document.frmbill.amount.value == "")
 	{
-		alert("Amount should not be empty..");
+		alert("Amount Should Not Be Empty.");
 		document.frmbill.amount.focus();
 		return false;
 	}
 	else if(!document.frmbill.amount.value.match(numericExpression))
 	{
-		alert("Amount not valid..");
+		alert("Amount Not Valid.");
 		document.frmbill.amount.focus();
 		return false;
 	}
 	else if(document.frmbill.discount.value == "")
 	{
-		alert("Discount should not be empty..");
+		alert("Discount Should Not Be Empty.");
 		document.frmbill.discount.focus();
 		return false;
 	}
 	else if(!document.frmbill.discount.value.match(numericExpression))
 	{
-		alert("Discount  not valid..");
+		alert("Discount  Not Valid.");
 		document.frmbill.discount.focus();
 		return false;
 	}
 	else if(document.frmbill.tax.value == "")
 	{
-		alert("Tax Amount should not be empty..");
+		alert("Tax Amount Should Not Be Empty.");
 		document.frmbill.tax.focus();
 		return false;
 	}
 	else if(!document.frmbill.tax.value.match(numericExpression))
 	{
-		alert("Tax Amount not valid..");
+		alert("Tax Amount Not Valid.");
 		document.frmbill.tax.focus();
 		return false;
 	}
 	else if(document.frmbill.bill.value == "")
 	{
-		alert("Bill Amount should not be empty..");
+		alert("Bill Amount Should Not Be Empty.");
 		document.frmbill.bill.focus();
 		return false;
 	}
 	else if(!document.frmbill.bill.value.match(numericExpression))
 	{
-		alert("Bill Amount not valid..");
+		alert("Bill Amount Not Valid.");
 		document.frmbill.bill.focus();
 		return false;
 	}
 	else if(document.frmbill.textarea.value == "")
 	{
-		alert("Discount Reason should not be empty..");
+		alert("Discount Reason Should Not Be Empty.");
 		document.frmbill.textarea.focus();
 		return false;
 	}
 	else if(!document.frmbill.textarea.value.match(alphaspaceExp))
 	{
-		alert("Discount Reason  not valid..");
+		alert("Discount Reason  Not Valid.");
 		document.frmbill.textarea.focus();
 		return false;
 	}
 	else if(document.frmbill.paid.value == "")
 	{
-		alert("Paid Amount should not be empty..");
+		alert("Paid Amount Should Not Be Empty.");
 		document.frmbill.paid.focus();
 		return false;
 	}
 	else if(!document.frmbill.paid.value.match(numericExpression))
 	{
-		alert("Paid Amount not valid..");
+		alert("Paid Amount Not Valid.");
 		document.frmbill.paid.focus();
 		return false;
 	}
 	else if(document.frmbill.Dtime.value == "")
 	{
-		alert("Discharge Time should not be empty..");
+		alert("Discharge Time Should Not Be Empty.");
 		document.frmbill.Dtime.focus();
 		return false;
 	}
 	else if(document.frmbill.Ddate.value == "")
 	{
-		alert("Discharge Date should not be empty..");
+		alert("Discharge Date Should Not Be Empty.");
 		document.frmbill.Ddate.focus();
 		return false;
 	}

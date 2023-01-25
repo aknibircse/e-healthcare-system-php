@@ -8,7 +8,7 @@ if(isset($_POST['submit']))
 			 $sql ="UPDATE doctor_timings SET doctorid='$_POST[select2]',start_time='$_POST[ftime]',end_time='$_POST[ttime]',status='$_POST[select]'  WHERE doctor_timings_id='$_GET[editid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
-			echo "<script>alert('Doctor Timings record updated successfully...');</script>";
+			echo "<script>alert('Doctor Timings Record Updated Successfully.');</script>";
 		}
 		else
 		{
@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
 	$sql ="INSERT INTO doctor_timings(doctorid,start_time,end_time,status) values('$_POST[select2]','$_POST[ftime]','$_POST[ttime]','$_POST[select]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Doctor Timings record inserted successfully...');</script>";
+		echo "<script>alert('Doctor Timings Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -131,26 +131,26 @@ function validateform()
 {
 	if(document.frmdocttimings.select2.value == "")
 	{
-		alert("doctor name should not be empty..");
+		alert("Doctor Name Should Not Be Empty.");
 		document.frmdocttimings.select2.focus();
 		return false;
 	}
 	else if(document.frmdocttimings.ftime.value == "")
 	{
-		alert("from time should not be empty..");
+		alert("From Time Should Not Be Empty.");
 		document.frmdocttimings.ftime.focus();
 		return false;
 	}
 	else if(document.frmdocttimings.ttime.value == "")
 	{
-		alert("To time should not be empty..");
+		alert("To Time Should Not Be Empty.");
 		document.frmdocttimings.ttime.focus();
 		return false;
 	}
 	
 	else if(document.frmdocttimings.select.value == "" )
 	{
-		alert("Kindly select the status..");
+		alert("Kindly Select The Status.");
 		document.frmdocttimings.select.focus();
 		return false;
 	}

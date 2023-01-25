@@ -9,7 +9,7 @@ if(isset($_POST['submit']))
    $sql ="UPDATE appointment SET patientid='$_POST[select4]',departmentid='$_POST[select5]',appointmentdate='$_POST[appointmentdate]',appointmenttime='$_POST[time]',doctorid='$_POST[select6]',status='$_POST[select]' WHERE appointmentid='$_GET[editid]'";
    if($qsql = mysqli_query($con,$sql))
    {
-    echo "<script>alert('appointment record updated successfully...');</script>";
+    echo "<script>alert('Appointment Record Updated Successfully.');</script>";
 }
 else
 {
@@ -26,7 +26,7 @@ else
    {
 
     include("insertbillingrecord.php");	
-    echo "<script>alert('Appointment record inserted successfully...');</script>";
+    echo "<script>alert('Appointment Record Inserted Successfully.');</script>";
     echo "<script>window.location='patientreport.php?patientid=$_POST[select4]';</script>";
 }
 else
@@ -244,31 +244,31 @@ if(isset($_GET['editid']))
 <script type="application/javascript">
 function validateform() {
     if (document.frmappnt.select4.value == "") {
-        alert("Patient name should not be empty..");
+        alert("Patient Name Should Not Be Empty.");
         document.frmappnt.select4.focus();
         return false;
     } else if (document.frmappnt.select3.value == "") {
-        alert("Room type should not be empty..");
+        alert("Room Type Should Not Be Empty.");
         document.frmappnt.select3.focus();
         return false;
     } else if (document.frmappnt.select5.value == "") {
-        alert("Department name should not be empty..");
+        alert("Department Name Should Not Be Empty.");
         document.frmappnt.select5.focus();
         return false;
     } else if (document.frmappnt.appointmentdate.value == "") {
-        alert("Appointment date should not be empty..");
+        alert("Appointment Date Should Not Be Empty.");
         document.frmappnt.appointmentdate.focus();
         return false;
     } else if (document.frmappnt.time.value == "") {
-        alert("Appointment time should not be empty..");
+        alert("Appointment Time Should Not Be Empty.");
         document.frmappnt.time.focus();
         return false;
     } else if (document.frmappnt.select6.value == "") {
-        alert("Doctor name should not be empty..");
+        alert("Doctor Name Should Not Be Empty..");
         document.frmappnt.select6.focus();
         return false;
     } else if (document.frmappnt.select.value == "") {
-        alert("Kindly select the status..");
+        alert("Kindly Select The Status.");
         document.frmappnt.select.focus();
         return false;
     } else {

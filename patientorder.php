@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
 	$sql ="INSERT INTO `orders`( `patientid`, `orderdate`,  `address`, `mobileno`)  values('$_POST[select2]','$_POST[orderdate]','$_POST[address]','$_POST[mobilenumber]')";
 	if($qsql = mysqli_query($con,$sql))
 	{
-		echo "<script>alert('Patient order record inserted successfully...');</script>";
+		echo "<script>alert('Patient Order Record Inserted Successfully.');</script>";
 	}
 	else
 	{
@@ -98,32 +98,32 @@ function validateform()
 {
 	if(document.frmpatorder.select2.value == "")
 	{
-		alert("Patient name should not be empty..");
+		alert("Patient Name Should Not Be Empty.");
 		document.frmpatorder.select2.focus();
 		return false;
 	}
 	
 	else if(document.frmpatorder.orderdate.value == "")
 	{
-		alert("Order date should not be empty..");
+		alert("Order Date Should Not Be Empty.");
 		document.frmpatorder.orderdate.focus();
 		return false;
 	}
 	else if(document.frmpatorder.address.value == "")
 	{
-		alert("Address should not be empty..");
+		alert("Address Should Not Be Empty.");
 		document.frmpatorder.address.focus();
 		return false;
 	}
 	else if(document.frmpatorder.mobilenumber.value == "")
 	{
-		alert("Mobile number should not be empty..");
+		alert("Mobile Number Should Not Be Empty.");
 		document.frmpatorder.mobilenumber.focus();
 		return false;
 	}
 	else if(!document.frmpatorder.mobilenumber.value.match(numericExpression))
 	{
-		alert("Mobile number not valid..");
+		alert("Mobile Number Not Valid.");
 		document.frmpatorder.mobilenumber.focus();
 		return false;
 	}

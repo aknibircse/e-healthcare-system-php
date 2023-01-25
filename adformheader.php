@@ -40,7 +40,7 @@ $tim = date("H:i:s");
                     </div>
                 </div>
             </div>
-            <p>Please wait...</p>
+            <p>Please Wait.</p>
         </div>
     </div>
     <!-- #END# Page Loader -->

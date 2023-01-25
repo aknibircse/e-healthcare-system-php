@@ -1,5 +1,10 @@
+require 'includes/Exception.php';
+require 'includes/PHPMailer.php';
+require 'includes/SMTP.php';
 
-  <?php include 'header.php';?>
+
+
+<?php include 'header.php';?>
 
   
   <!-- Content -->
@@ -65,11 +70,13 @@
     
     
     <!-- MAP -->
-    <section class="map-block margin-top-100">
+<!--
+      <section class="map-block margin-top-100">
       <div class="map-wrapper" id="map-canvas" data-lat="23.740051" data-lng="90.371239" data-zoom="13" data-style="1"></div>
       <div class="markers-wrapper addresses-block"> <a class="marker" data-rel="map-canvas" data-lat="23.740051" data-lng="90.371239" data-string="Medical Hospital"></a> </div>
     </section>
   </div>
+-->
   
   <!-- Footer -->
 
