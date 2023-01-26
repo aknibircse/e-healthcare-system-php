@@ -7,7 +7,8 @@ if(isset($_GET['delid']))
 	$qsql=mysqli_query($con,$sql);
 	if(mysqli_affected_rows($con) == 1)
 	{
-			echo "<script>window.location='prescriptionrecord.php?prescriptionid=$_GET[prescriptionid]';</script>";
+		echo "<script>window.location='prescriptionrecord.php?prescriptionid=$_GET[prescriptionid]';
+		</script>";
 		echo "<script>alert('Prescription Deleted Successfully.');</script>";
 	}
 }
@@ -189,11 +190,11 @@ if(isset($_GET['editid']))
 		while($rs = mysqli_fetch_array($qsql))
 		{
         echo "<tr>
-          <td>&nbsp;$rs[medicinename]</td>
-		    <td>&nbsp;$rs[dosage]</td>
-          <td>&nbsp;$$rs[cost]</td>
-		   <td>&nbsp;$rs[unit]</td>
-		   <td>&nbsp;". $rs['cost'] * $rs['unit'] ."&nbsp;৳</td>";
+        <td>$rs[medicinename]</td>
+		<td>$rs[dosage]</td>
+        <td>$rs[cost]&nbsp;৳</td>
+		<td>$rs[unit]</td>
+		<td>". $rs['cost'] * $rs['unit'] ."&nbsp;৳</td>";
 			if(!isset($_SESSION['patientid']))
 			{
 			 echo " <td>&nbsp; <a href='prescriptionrecord.php?delid=$rs[prescription_record_id]&prescriptionid=$_GET[prescriptionid]'>Delete</a> </td>"; 
@@ -204,7 +205,7 @@ if(isset($_GET['editid']))
 		?>
         <tr>
           <th colspan="4" align="right">Grand Total </th>
-		  <th align="right">$<?php echo $gtotal; ?></th>
+		  <th align="right"><?php echo $gtotal; ?>&nbsp;<span style="color: green;">৳</span></th>
 		  <td></td>
           </tr>
         <tr>

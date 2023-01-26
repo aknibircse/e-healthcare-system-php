@@ -61,8 +61,10 @@ $tim = date("H:i:s");
   <!-- Header -->
   <header class="header-style-2">
     <div class="container">
-      <div class="logo"> <a href="index.php"><img src="images/ehs.png" alt="" style="height: 50px;">
-    <span style="color: #c46506; font-size: large; font-weight: 700;">E-Healthcare System</span>
+      <div class="logo"> <a href="index.php"><img src="images/head.png" alt="" style="height: 50px; padding-bottom: 6px;">
+   <span style="color: #50EC9E; font-size: large; font-weight: 700;">
+   E-Healthcare System</span>
+  </span> 
     </a> </div>
       <div class="head-info">
         <ul>

@@ -79,9 +79,9 @@ if(isset($_GET['editid']))
 			$rsdoctor = mysqli_fetch_array($qsqldoctor);
 			
         echo "<tr>
-          <td>&nbsp;$rsdoctor[doctorname]</td>
-          <td>&nbsp;$rspatient[patientname]</td>
-		   <td>&nbsp;$rs[prescriptiondate]</td>
+        <td>&nbsp;$rsdoctor[doctorname]</td>
+        <td>&nbsp;$rspatient[patientname]</td>
+		<td>&nbsp;$rs[prescriptiondate]</td>
 		<td>&nbsp;$rs[status]</td>
 		
         </tr>";
