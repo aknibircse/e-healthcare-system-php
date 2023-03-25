@@ -18,7 +18,7 @@ require 'includes/SMTP.php';
         <div class="heading-block">
           <h4>GET IN TOUCH</h4>
           <hr>
-          <span>Duis autem vel eum iriure dolor in hendrerit n vuew lputate velit esse molestie conseu vel illum dolore eufe ugiat nulla facilisis at vero.</span> </div>
+          <span>We are here to help you with your healthcare needs. Our knowledgeable staff is available to answer any questions that you may have. Whether you need assistance with finding a doctor, making a payment, or understanding your insurance coverage, we are here to help. </span> </div>
         <div class="contact">
           <div class="contact-form"> 
             <!-- FORM  -->
