@@ -12,7 +12,7 @@ if(isset($_POST['submit']))
 	{
 		$dt = date("Y-m-d");
 		$tim = date("H:i:s");
-		$sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,city,mobileno,loginid,password,gender,dob,status) values('$_POST[patiente]','$dt','$tim','$_POST[textarea]','$_POST[city]','$_POST[mobileno]','$_POST[loginid]','$_POST[password]','$_POST[select6]','$_POST[dob]','Active')";
+		$sql ="INSERT INTO patient(patientname,admissiondate,admissiontime,address,method,mobileno,loginid,password,gender,dob,status) values('$_POST[patiente]','$dt','$tim','$_POST[textarea]','$_POST[method]','$_POST[mobileno]','$_POST[loginid]','$_POST[password]','$_POST[select6]','$_POST[dob]','Active')";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			/* echo "<script>alert('patient record inserted successfully...');</script>"; */
@@ -130,14 +130,22 @@ if(isset($_SESSION['patientid']))
                                                     value="<?php echo $rspatient['address'];  ?>"
                                                     <?php echo $readonly; ?>><i class="icon-compass"></i>
                                             </label>
-
                                         </li>
-                                        <li class="col-sm-6">
-                                            <label><input placeholder="City" type="text" class="form-control"
-                                                    name="city" id="city" value="<?php echo $rspatient['city'];  ?>"
-                                                    <?php echo $readonly; ?>><i class="icon-pin"></i>
-                                            </label>
 
+                                        <li class="col-sm-6">
+                                            <label>
+                                                <select name="method" id="method" class="selectpicker">
+                                                    <option value="" selected="" hidden="">Select Method</option>
+                                                    <?php
+                                        $arr = array("Online","Offline");
+                                        foreach($arr as $val)
+                                        {
+                                            echo "<option value='$val'>$val</option>";
+                                        }
+                                        ?>
+                                        </select>
+
+                                        <i class="icon-pin"></i></label>
                                         </li>
                                         <li class="col-sm-6">
                                             <label>
@@ -325,13 +333,13 @@ function validateform() {
         alert("Address Should Not Be Empty.");
         document.frmpatapp.textarea.focus();
         return false;
-    } else if (document.frmpatapp.city.value == "") {
-        alert("City Should Not Be Empty.");
-        document.frmpatapp.city.focus();
+    } else if (document.frmpatapp.method.value == "") {
+        alert("Method Should Not Be Empty.");
+        document.frmpatapp.method.focus();
         return false;
-    } else if (!document.frmpatapp.city.value.match(alphaspaceExp)) {
-        alert("City Name Not Valid.");
-        document.frmpatapp.city.focus();
+    } else if (!document.frmpatapp.method.value.match(alphaspaceExp)) {
+        alert("Method Not Valid.");
+        document.frmpatapp.method.focus();
         return false;
     } else if (document.frmpatapp.mobileno.value == "") {
         alert("Mobile Number Should Not Be Empty.");

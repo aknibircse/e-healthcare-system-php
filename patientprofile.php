@@ -3,7 +3,7 @@ include("adheader.php");
 include("dbconnection.php");
 if(isset($_POST['submit']))
 {
-		$sql ="UPDATE patient SET patientname='$_POST[patientname]',admissiondate='$_POST[admissiondate]',admissiontime='$_POST[admissiontme]',address='$_POST[address]',mobileno='$_POST[mobilenumber]',city='$_POST[city]',pincode='$_POST[pincode]',loginid='$_POST[loginid]',bloodgroup='$_POST[select2]',gender='$_POST[select3]',dob='$_POST[dateofbirth]' WHERE patientid='$_SESSION[patientid]'";
+		$sql ="UPDATE patient SET patientname='$_POST[patientname]',admissiondate='$_POST[admissiondate]',admissiontime='$_POST[admissiontme]',address='$_POST[address]',mobileno='$_POST[mobilenumber]',method='$_POST[method]',pincode='$_POST[pincode]',loginid='$_POST[loginid]',bloodgroup='$_POST[select2]',gender='$_POST[select3]',dob='$_POST[dateofbirth]' WHERE patientid='$_SESSION[patientid]'";
 		if($qsql = mysqli_query($con,$sql))
 		{
 			echo "<script>alert('patient record updated successfully...');</script>";
@@ -85,9 +85,25 @@ if(isset($_SESSION['patientid']))
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <div class="form-line">
-                                    	<label for="">City</label>
-                                    	<div class="form-line">
-                                       <input class="form-control" type="text" name="city" id="city" value="<?php echo $rsedit['city']; ?>" />
+                                    	<label for="method">Method</label>
+                                    	<div class="form-line">											
+										<select name="method" id="method" class="form-control show-tick">
+                                    		<option value="" selected="" hidden="">Select</option>
+                                    		<?php
+                                    		$arr = array("Online","Offline");
+                                    		foreach($arr as $val)
+                                    		{
+                                    			if($val == $rsedit['method'])
+                                    			{
+                                    				echo "<option value='$val' selected>$val</option>";
+                                    			}
+                                    			else
+                                    			{
+                                    				echo "<option value='$val'>$val</option>";			  
+                                    			}
+                                    		}
+                                    		?>
+                                    	</select>
                                        </div>
                                     </div>
                                 </div>
@@ -99,7 +115,6 @@ if(isset($_SESSION['patientid']))
                                     <div class="form-line">
                                     	<label for="">ZIP Code</label>
                                     	<div class="form-line">
-
                                         <input class="form-control" type="text" name="pincode" id="pincode" value="<?php echo $rsedit['pincode']; ?>" />
                                     </div>
                                     </div>
@@ -115,6 +130,7 @@ if(isset($_SESSION['patientid']))
                                     </div>
                                 </div>
                             </div>
+							
                             <div class="col-sm-6">
                                 <div class="form-group">
                                     <div class="form-line">
@@ -245,16 +261,16 @@ function validateform()
 		document.frmpatprfl.mobilenumber.focus();
 		return false;
 	}
-	else if(document.frmpatprfl.city.value == "")
+	else if(document.frmpatprfl.method.value == "")
 	{
-		alert("City Should Not Be Empty.");
-		document.frmpatprfl.city.focus();
+		alert("Method Should Not Be Empty.");
+		document.frmpatprfl.method.focus();
 		return false;
 	}
-	else if(!document.frmpatprfl.city.value.match(alphaspaceExp))
+	else if(!document.frmpatprfl.method.value.match(alphaspaceExp))
 	{
-		alert("City Not Valid.");
-		document.frmpatprfl.city.focus();
+		alert("Method Not Valid.");
+		document.frmpatprfl.method.focus();
 		return false;
 	}
 	else if(document.frmpatprfl.pincode.value == "")
@@ -275,12 +291,12 @@ function validateform()
 		document.frmpatprfl.loginid.focus();
 		return false;
 	}
-	else if(!document.frmpatprfl.loginid.value.match(emailExp))
+	/*else if(!document.frmpatprfl.loginid.value.match(emailExp))
 	{
 		alert("Login ID Not Valid.");
 		document.frmpatprfl.loginid.focus();
-		return false;
-	}
+		return true;
+	} */
 	else if(document.frmpatprfl.password.value == "")
 	{
 		alert("Password Should Not Be Empty.");
