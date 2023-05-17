@@ -353,10 +353,10 @@ function validateform() {
         alert("Login ID Should Not Be Empty.");
         document.frmpatapp.loginid.focus();
         return false;
-    } else if (!document.frmpatapp.loginid.value.match(alphanumericExp)) {
+    } /*else if (!document.frmpatapp.loginid.value.match(alphanumericExp)) {
         alert("login ID Not Valid.");
         document.frmpatapp.loginid.focus();
-        return false;
+        return false;*/
     } else if (document.frmpatapp.password.value == "") {
         alert("Password Should Not Be Empty.");
         document.frmpatapp.password.focus();
