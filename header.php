@@ -73,7 +73,7 @@ $tim = date("H:i:s");
             +880 1750490791</p>
           </li>
           <li> <i class="fa fa-envelope-o"></i>
-            <p>taslima15-2651@diu.edu.bd <br>
+            <p>taslima15-2561@diu.edu.bd <br>
                taslima2561.cse@gmail.com
           </p>
           </li>
