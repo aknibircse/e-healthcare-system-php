@@ -114,7 +114,7 @@ if(isset($_GET['editid']))
 		{
         echo "<tr>
           <td>&nbsp;$rs[medicine_name]</td>
-          <td>&nbsp;Rs. $rs[cost]</td>
+          <td>&nbsp;$rs[cost] ৳</td>
 		   <td>&nbsp;$rs[unit]</td>
 		    <td>&nbsp;$rs[dosage]</td>";
 			if(!isset($_SESSION['patientid']))
