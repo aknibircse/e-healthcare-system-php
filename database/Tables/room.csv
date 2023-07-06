@@ -1,0 +1,6 @@
+"roomid","roomtype","roomno","noofbeds","room_tariff","status"
+"15","GENERAL WARD","1","20","500.00","Active"
+"16","SPECIAL WARD","2","10","100.00","Active"
+"17","GENERAL WARD","2","10","500.00","Active"
+"18","GENERAL WARD","121","13","150.00","Active"
+"19","GENERAL WARD","850","11","500.00","Active"

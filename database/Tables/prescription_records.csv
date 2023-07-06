@@ -1,0 +1,4 @@
+"prescription_record_id","prescription_id","medicine_name","cost","unit","dosage","status"
+"1","1","1","3.00","15","1-1-1","Active"
+"2","2","13","55.00","1","0-1-1","Active"
+"3","3","9","231.00","1","1-0-1","Active"
