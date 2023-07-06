@@ -1,0 +1,5 @@
+"appointmentid","appointmenttype","patientid","roomid","departmentid","appointmentdate","appointmenttime","doctorid","status","app_reason"
+"1",,"1","0","1","2023-03-09","03:00:00","1","Approved","I am suffering with Cold and Fever"
+"2",,"3","0","2","2023-03-16","09:22:00","2","Approved","I am suffering with Dycentry"
+"4",,"5","0","4","2023-06-06","14:28:00","5","Approved","I am suffering with Stomach Problem"
+"5",,"6","0","7","2023-03-09","11:18:00","7","Approved","I have Problem with my Menstrual"

@@ -1,0 +1,4 @@
+"prescriptionid","treatment_records_id","doctorid","patientid","delivery_type","delivery_id","prescriptiondate","status","appointmentid"
+"1","0","1","1",,"0","2023-03-09","Active","1"
+"2","0","5","5",,"0","2023-03-09","Active","4"
+"3","0","7","6",,"0","2023-03-09","Active","5"
