@@ -1,0 +1,7 @@
+"treatment_records_id","treatmentid","appointmentid","patientid","doctorid","treatment_description","uploads","treatment_date","treatment_time","status"
+"1","20","1","1","1","Fever,
+take paracitamol","1700948653xray-film-reading-made-easy.pdf","2023-04-11","17:00:00","Active"
+"2","20","2","3","2","Dycentry,Take Amodis","1700948653xray-film-reading-made-easy.pdf","2023-06-13","18:24:00","Active"
+"3","20","4","5","5","to study the morphology of blood and blood-forming tissues","1700948653xray-film-reading-made-easy.pdf","2023-01-24","16:40:00","Active"
+"4","33","5","6","7","based on small cell lung cancer","1700948653xray-film-reading-made-easy.pdf","2023-03-18","15:22:00","Active"
+"5","22","1","1","1","X-Ray","1700948653xray-film-reading-made-easy.pdf","2023-06-17","03:39:00","Active"

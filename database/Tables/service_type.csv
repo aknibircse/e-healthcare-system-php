@@ -1,0 +1,6 @@
+"service_type_id","service_type","servicecharge","description","status"
+"10","X-ray","250.00","To take fractured photo copy","Active"
+"11","Scanning","450.00","To scan body from injury","Active"
+"12","MRI","300.00","Regarding body scan","Active"
+"13","Blood Testing","150.00","To detect the type of disease","Active"
+"14","Diagnosis","210.00","To analyse the diagnosis","Active"

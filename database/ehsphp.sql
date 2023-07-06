@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2021 at 08:03 PM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Generation Time: Jul 06, 2023 at 09:26 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -17,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ohmsphp`
+-- Database: `ehsphp`
 --
 
 -- --------------------------------------------------------
@@ -33,14 +34,14 @@ CREATE TABLE `admin` (
   `password` varchar(25) NOT NULL,
   `status` varchar(10) NOT NULL,
   `usertype` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`adminid`, `adminname`, `loginid`, `password`, `status`, `usertype`) VALUES
-(1, 'Joseph Spector', 'admin', 'Password@123', 'Active', '');
+(1, 'Torin', 'admin', '12345678', 'Active', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -59,17 +60,17 @@ CREATE TABLE `appointment` (
   `doctorid` int(10) NOT NULL,
   `status` varchar(10) NOT NULL,
   `app_reason` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `appointment`
 --
 
 INSERT INTO `appointment` (`appointmentid`, `appointmenttype`, `patientid`, `roomid`, `departmentid`, `appointmentdate`, `appointmenttime`, `doctorid`, `status`, `app_reason`) VALUES
-(1, '', 1, 0, 1, '2019-06-17', '03:00:00', 1, 'Approved', 'Fever'),
-(2, '', 3, 0, 2, '2021-06-25', '09:22:00', 2, 'Approved', 'this is a demo test'),
-(4, '', 5, 0, 4, '2021-06-24', '14:28:00', 5, 'Approved', 'demo demo demo'),
-(5, '', 6, 0, 7, '2021-06-24', '11:18:00', 7, 'Approved', 'Demo Test, Demo Reason!!');
+(1, '', 1, 0, 1, '2023-03-09', '03:00:00', 1, 'Approved', 'I am suffering with Cold and Fever'),
+(2, '', 3, 0, 2, '2023-03-16', '09:22:00', 2, 'Approved', 'I am suffering with Dycentry'),
+(4, '', 5, 0, 4, '2023-06-06', '14:28:00', 5, 'Approved', 'I am suffering with Stomach Problem'),
+(5, '', 6, 0, 7, '2023-03-09', '11:18:00', 7, 'Approved', 'I have Problem with my Menstrual');
 
 -- --------------------------------------------------------
 
@@ -88,18 +89,19 @@ CREATE TABLE `billing` (
   `discountreason` text NOT NULL,
   `discharge_time` time NOT NULL,
   `discharge_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `billing`
 --
 
 INSERT INTO `billing` (`billingid`, `patientid`, `appointmentid`, `billingdate`, `billingtime`, `discount`, `taxamount`, `discountreason`, `discharge_time`, `discharge_date`) VALUES
-(1, 0, 0, '2019-06-15', '18:53:38', 0.00, 0.00, '', '00:00:00', '0000-00-00'),
-(2, 1, 1, '2019-06-15', '19:56:20', 0.00, 0.00, '', '00:00:00', '0000-00-00'),
-(3, 3, 2, '2021-06-24', '14:39:11', 0.00, 0.00, 'none , ', '07:56:26', '2021-06-24'),
-(4, 5, 4, '2021-06-24', '18:48:00', 0.00, 0.00, 'none , ', '07:26:39', '2021-06-24'),
-(5, 6, 5, '2021-06-24', '19:36:12', 0.00, 0.00, 'no discounts , ', '07:54:07', '2021-06-24');
+(1, 0, 0, '2023-06-10', '18:53:38', 0.00, 5.00, 'Bkash Payment', '12:00:00', '2023-03-22'),
+(2, 1, 1, '2023-06-23', '19:56:20', 135.00, 6.00, 'Nagad Payment', '15:59:00', '2023-02-18'),
+(3, 3, 2, '2023-01-04', '14:39:11', 0.00, 0.00, 'None', '07:56:26', '2023-06-24'),
+(4, 5, 4, '2023-04-28', '18:48:00', 658.00, 9.00, 'Credit Card Payment', '07:26:39', '2023-05-24'),
+(5, 6, 5, '2023-05-15', '19:36:12', 432.00, 15.00, 'Limited Offer', '07:54:07', '2023-06-18'),
+(6, 8, 7, '2023-05-17', '03:56:46', 940.00, 25.00, 'Premium User', '11:59:00', '2023-03-22');
 
 -- --------------------------------------------------------
 
@@ -115,24 +117,26 @@ CREATE TABLE `billing_records` (
   `bill_amount` float(10,2) NOT NULL,
   `bill_date` date NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `billing_records`
 --
 
 INSERT INTO `billing_records` (`billingservice_id`, `billingid`, `bill_type_id`, `bill_type`, `bill_amount`, `bill_date`, `status`) VALUES
-(1, 2, 1, 'Consultancy Charge', 45.00, '2019-06-15', 'Active'),
-(2, 2, 20, 'Treatment', 300.00, '2019-06-15', 'Active'),
-(3, 2, 1, 'Prescription Charge', 45.00, '2019-06-15', 'Active'),
-(4, 3, 2, 'Consultancy Charge', 55.00, '2021-06-24', 'Active'),
-(5, 3, 20, 'Treatment', 300.00, '2021-06-24', 'Active'),
-(6, 4, 5, 'Consultancy Charge', 75.00, '2021-06-24', 'Active'),
-(7, 4, 20, 'Treatment', 179.00, '2021-06-24', 'Active'),
-(8, 4, 2, 'Prescription Charge', 55.00, '2021-06-24', 'Active'),
-(9, 5, 7, 'Consultancy Charge', 995.00, '2021-06-24', 'Active'),
-(10, 5, 33, 'Treatment', 4850.00, '2021-06-24', 'Active'),
-(11, 5, 3, 'Prescription Charge', 231.00, '2021-06-24', 'Active');
+(1, 2, 1, 'Consultancy Charge', 450.00, '2023-04-05', 'Active'),
+(2, 2, 20, 'Treatment', 300.00, '2023-04-05', 'Active'),
+(3, 2, 1, 'Prescription Charge', 45.00, '2023-04-05', 'Active'),
+(4, 3, 2, 'Consultancy Charge', 55.00, '2023-03-15', 'Active'),
+(5, 3, 20, 'Treatment', 300.00, '2023-03-15', 'Active'),
+(6, 4, 5, 'Consultancy Charge', 75.00, '2023-04-11', 'Active'),
+(7, 4, 20, 'Treatment', 179.00, '2023-04-11', 'Active'),
+(8, 4, 2, 'Prescription Charge', 55.00, '2023-04-11', 'Active'),
+(9, 5, 7, 'Consultancy Charge', 995.00, '2023-06-24', 'Active'),
+(10, 5, 33, 'Treatment', 4850.00, '2023-06-24', 'Active'),
+(11, 5, 3, 'Prescription Charge', 231.00, '2023-06-24', 'Active'),
+(15, 2, 0, 'Consultancy Charge', 0.00, '2023-07-06', 'Active'),
+(16, 2, 0, 'Treatment', 0.00, '2023-07-06', 'Active');
 
 -- --------------------------------------------------------
 
@@ -145,7 +149,7 @@ CREATE TABLE `department` (
   `departmentname` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `department`
@@ -179,21 +183,21 @@ CREATE TABLE `doctor` (
   `education` varchar(25) NOT NULL,
   `experience` float(11,1) NOT NULL,
   `consultancy_charge` float(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `doctor`
 --
 
 INSERT INTO `doctor` (`doctorid`, `doctorname`, `mobileno`, `departmentid`, `loginid`, `password`, `status`, `education`, `experience`, `consultancy_charge`) VALUES
-(1, 'Carol Bosworth', '7002225650', 1, 'carol', 'password', 'Active', 'MBBS', 7.0, 7.00),
-(2, 'Sirena S Rivera', '7023695696', 2, 'rivera', 'password', 'Active', 'DM', 4.0, 400.00),
-(3, 'Will Williams', '7014545470', 2, 'wiliams', 'password', 'Active', 'DM', 7.0, 500.00),
-(4, 'Thomas Borkowski', '7025558690', 3, 'thomas', 'password', 'Active', 'MD', 4.0, 155.00),
-(5, 'Jason Graham', '7854025410', 4, 'jason', 'password', 'Active', 'DM', 5.0, 75.00),
-(6, 'Viola McRoy', '7410002540', 5, 'viola', 'password', 'Active', 'MD', 8.0, 4200.00),
-(7, 'Logan Fletcher', '7012569990', 7, 'logan', 'password', 'Active', 'MD', 5.0, 995.00),
-(8, 'Ben Bernier', '7012225470', 6, 'ben', 'password', 'Active', 'DM', 3.0, 689.00);
+(1, 'AK NIBIR', '01763459873', 1, 'nibir', '12345678', 'Active', 'MBBS', 7.0, 700.00),
+(2, 'Amatul Bushra Akhi', '01768559873', 2, 'akhi', '12345678', 'Active', 'FCPS', 4.0, 400.00),
+(3, 'Jahid Hasan', '01963459873', 2, 'jahid', '12345678', 'Active', 'DM', 7.0, 500.00),
+(4, 'Rashidul Islam', '01764859873', 3, 'rashidul', '12345678', 'Active', 'MD', 4.0, 355.00),
+(5, 'RH Ratul', '01763059873', 4, 'ratul', '12345678', 'Active', 'DM', 5.0, 750.00),
+(6, 'Fatema Tuj Johura', '01973459873', 5, 'johura', '12345678', 'Active', 'MD', 8.0, 420.00),
+(7, 'Shamrat Ahmed ', '01763597895', 7, 'shamrat', '12345678', 'Active', 'MD', 5.0, 995.00),
+(8, 'Md. jahangir Alam', '01763457954', 6, 'jahangir', '12345678', 'Active', 'DM', 3.0, 689.00);
 
 -- --------------------------------------------------------
 
@@ -208,7 +212,7 @@ CREATE TABLE `doctor_timings` (
   `end_time` time NOT NULL,
   `available_day` varchar(15) NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `doctor_timings`
@@ -229,7 +233,7 @@ INSERT INTO `doctor_timings` (`doctor_timings_id`, `doctorid`, `start_time`, `en
 (28, 61, '11:11:00', '19:07:00', '', 'Active'),
 (29, 35, '11:11:00', '16:44:00', '', 'Active'),
 (30, 35, '01:10:00', '16:11:00', '', 'Active'),
-(31, 35, '01:02:00', '15:04:00', '2018-03-26', 'Active'),
+(31, 35, '01:02:00', '15:04:00', '', 'Active'),
 (32, 35, '16:25:00', '01:00:00', '', 'Active'),
 (33, 1, '18:00:00', '00:02:00', '', 'Active'),
 (34, 2, '07:36:00', '15:37:00', '', 'Active'),
@@ -247,27 +251,27 @@ CREATE TABLE `medicine` (
   `medicinecost` float(10,2) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `medicine`
 --
 
 INSERT INTO `medicine` (`medicineid`, `medicinename`, `medicinecost`, `description`, `status`) VALUES
-(1, 'Paracetamol', 3.00, 'For fever per day 1 pc', 'Active'),
-(2, 'Clotrimazole', 14.00, 'Clotrimazole is an antifungal, prescribed for local fungal infections', 'Active'),
-(3, 'Miconazole', 26.00, 'Prescribed for various skin infections such as jockitch and also for vaginal yeast infections', 'Active'),
-(4, 'Nystatin', 6.00, 'Antifungal drug, prescribed for fungal infections of the skin mouth vagina and intestinal tract', 'Active'),
-(5, 'Lotensin', 3.00, 'prevent your body from forming angiotensin', 'Active'),
-(6, 'Cozaan', 5.00, 'ARBs block the effects of angiotensin on your heart.', 'Active'),
-(7, 'Lovenox', 59.00, 'may prescribe an anticoagulant to prevent heart attack, stroke, or other serious health problems', 'Active'),
-(8, 'Abemaciclib', 278.00, 'drug for the treatment of advanced or metastatic breast cancers.', 'Active'),
-(9, 'Cyclophosphamide', 231.00, ' to treat lymphoma, multiple myeloma, leukemia, ovarian cancer, breast cancer, small cell lung cancer', 'Active'),
-(10, 'Captopril', 92.00, 'used alone or in combination with other medications to treat high blood pressure and heart failure.', 'Active'),
-(11, 'Enalapril', 18.00, 'to treat high blood pressure, diabetic kidney disease, and heart failure', 'Active'),
-(12, 'Ramipril', 31.00, 'to treat high blood pressure, diabetic kidney disease', 'Active'),
-(13, 'Hydroxyurea', 55.00, 'used in sickle-cell disease, essential thrombocythemia, chronic myelogenous leukemia and cervical cancer', 'Active'),
-(14, 'Phenprocoumon', 258.00, 'Used for prevention of thrombosis', 'Active');
+(1, 'Paracetamol', 3.00, 'For fever per day 1 pc', 'Available'),
+(2, 'Clotrimazole', 14.00, 'Clotrimazole is an antifungal, prescribed for local fungal infections', 'Available'),
+(3, 'Miconazole', 26.00, 'Prescribed for various skin infections such as jockitch and also for vaginal yeast infections', 'Stock Ou'),
+(4, 'Nystatin', 6.00, 'Antifungal drug, prescribed for fungal infections of the skin mouth vagina and intestinal tract', 'Available'),
+(5, 'Lotensin', 3.00, 'Prevent your body from forming angiotensin', 'Stock Ou'),
+(6, 'Cozaan', 5.00, 'ARB\'s block the effects of angiotensin on your heart.', 'Available'),
+(7, 'Lovenox', 59.00, 'May prescribe an anticoagulant to prevent heart attack, stroke, or other serious health problems', 'Stock Ou'),
+(8, 'Abemaciclib', 278.00, 'Drug for the treatment of advanced or metastatic breast cancers.', 'Available'),
+(9, 'Cyclophosphamide', 231.00, 'To treat lymphoma, multiple myeloma, leukemia, ovarian cancer, breast cancer, small cell lung cancer', 'Available'),
+(10, 'Captopril', 92.00, 'Used alone or in combination with other medications to treat high blood pressure and heart failure.', 'Stock Ou'),
+(11, 'Enalapril', 18.00, 'To treat high blood pressure, diabetic kidney disease, and heart failure', 'Stock Ou'),
+(12, 'Ramipril', 31.00, 'To treat high blood pressure, diabetic kidney disease', 'Available'),
+(13, 'Hydroxyurea', 55.00, 'Used in sickle-cell disease, essential thrombocythemia, chronic myelogenous leukemia and cervical cancer', 'Available'),
+(14, 'Phenprocoumon', 258.00, 'Used for prevention of thrombosis', 'Available');
 
 -- --------------------------------------------------------
 
@@ -291,7 +295,7 @@ CREATE TABLE `orders` (
   `cvv_no` varchar(5) NOT NULL,
   `expdate` date NOT NULL,
   `card_holder` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -306,7 +310,7 @@ CREATE TABLE `patient` (
   `admissiontime` time NOT NULL,
   `address` varchar(250) NOT NULL,
   `mobileno` varchar(15) NOT NULL,
-  `city` varchar(25) NOT NULL,
+  `method` varchar(25) NOT NULL,
   `pincode` varchar(20) NOT NULL,
   `loginid` varchar(50) NOT NULL,
   `password` varchar(25) NOT NULL,
@@ -314,18 +318,20 @@ CREATE TABLE `patient` (
   `gender` varchar(10) NOT NULL,
   `dob` date NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`patientid`, `patientname`, `admissiondate`, `admissiontime`, `address`, `mobileno`, `city`, `pincode`, `loginid`, `password`, `bloodgroup`, `gender`, `dob`, `status`) VALUES
-(1, 'Johnny', '2019-06-15', '18:47:22', 'Dhanmondi', '2125798361', 'Dhaka', '1207', 'admin', '123456789', 'O+', 'MALE', '1990-01-01', 'Active'),
-(3, 'Christine Moore', '2021-06-24', '14:38:04', '4327 Â Pride Avenue', '7012225690', 'Elmhurst', '63520', 'christine', 'password', 'A-', 'Female', '1992-02-12', 'Active'),
-(4, 'Demoname', '2021-06-24', '15:26:32', 'demo address', '7474747474', 'demo city', '', 'demo', 'password', '', 'Male', '1995-02-02', 'Active'),
-(5, 'Thomas Walters', '2021-06-24', '18:44:22', '1723  Cinnamon Lane', '7023658800', 'San Antonio', '', 'thomas', 'password', '', 'Female', '1992-03-12', 'Active'),
-(6, 'Eryn Carlos', '2021-06-24', '19:34:27', '2649 Wayside Lane', '7012225896', 'San Jose', '', 'carlos', 'password', '', 'Female', '1994-03-12', 'Active');
+INSERT INTO `patient` (`patientid`, `patientname`, `admissiondate`, `admissiontime`, `address`, `mobileno`, `method`, `pincode`, `loginid`, `password`, `bloodgroup`, `gender`, `dob`, `status`) VALUES
+(1, 'Johny Mia', '2023-04-15', '18:47:22', 'Sukrabad, Dhanmondi, Dhaka', '01796345893', 'Offline', '1214', 'johny', '12345678', 'O+', 'MALE', '1990-01-01', 'Active'),
+(3, 'Riaz Sarker', '2023-01-24', '14:38:04', 'Bosila, Mohammadpur, Dhaka', '01796348536', 'Online', '1207', 'riaz', '12345678', 'A-', 'MALE', '1992-02-12', 'Active'),
+(4, 'Jakia Sultana', '2023-02-24', '15:26:32', 'Birulia, Savar, Dhaka', '01796734893', 'Offline', '1340', 'jakia', '12345678', 'B+', 'FEMALE', '1995-02-02', 'Active'),
+(5, 'Mehedi Hasan', '2023-03-24', '18:44:22', 'Saptana Bazar, Bahadurmore, Lalmonirhat', '01797624893', 'Online', '5500', 'mehedi', '12345678', 'AB+', 'MALE', '1992-03-12', 'Active'),
+(6, 'Morzina Akter', '2023-06-24', '19:34:27', 'Khagan Bazar, Ashulia, Dhaka', '01796456893', 'Online', '1342', 'morzina', '12345678', 'AB-', 'FEMALE', '1994-03-12', 'Active'),
+(7, 'MH Hridoy', '2023-05-18', '19:58:39', 'Dattapara, Birulia, Dhaka', '01796345893', 'Online', '1341', 'hridoy', '12345678', 'A-', 'MALE', '2023-05-01', 'Active'),
+(8, 'Masud Rana', '2023-05-17', '03:53:36', 'Link Road, Firmgate, Dhaka', '01797892893', 'Offline', '1205', 'masud', '12345678', 'O-', 'MALE', '2023-05-05', 'Active');
 
 -- --------------------------------------------------------
 
@@ -345,16 +351,16 @@ CREATE TABLE `payment` (
   `cardnumber` int(25) NOT NULL,
   `cvvno` int(5) NOT NULL,
   `expdate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `payment`
 --
 
 INSERT INTO `payment` (`paymentid`, `patientid`, `appointmentid`, `paiddate`, `paidtime`, `paidamount`, `status`, `cardholder`, `cardnumber`, `cvvno`, `expdate`) VALUES
-(1, 5, 4, '2021-06-24', '19:26:51', 324.45, 'Active', '', 0, 0, '0000-00-00'),
-(2, 6, 5, '2021-06-24', '19:54:23', 6379.80, 'Active', '', 0, 0, '0000-00-00'),
-(3, 3, 2, '2021-06-24', '19:56:33', 372.75, 'Active', '', 0, 0, '0000-00-00');
+(1, 5, 4, '2023-06-24', '19:26:51', 400.00, 'Active', 'Mehedi Hasan', 2147483647, 156, '0000-00-00'),
+(2, 6, 5, '2023-06-24', '19:54:23', 6379.80, 'Active', 'Morzina Akter', 2147483647, 985, '0000-00-00'),
+(3, 3, 2, '2023-06-24', '19:56:33', 372.75, 'Active', 'Riaz Sarker', 2147483647, 475, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -372,16 +378,16 @@ CREATE TABLE `prescription` (
   `prescriptiondate` date NOT NULL,
   `status` varchar(10) NOT NULL,
   `appointmentid` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `prescription`
 --
 
 INSERT INTO `prescription` (`prescriptionid`, `treatment_records_id`, `doctorid`, `patientid`, `delivery_type`, `delivery_id`, `prescriptiondate`, `status`, `appointmentid`) VALUES
-(1, 0, 1, 1, '', 0, '2019-06-17', 'Active', 1),
-(2, 0, 5, 5, '', 0, '2021-06-25', 'Active', 4),
-(3, 0, 7, 6, '', 0, '2021-06-25', 'Active', 5);
+(1, 0, 1, 1, '', 0, '2023-03-09', 'Active', 1),
+(2, 0, 5, 5, '', 0, '2023-03-09', 'Active', 4),
+(3, 0, 7, 6, '', 0, '2023-03-09', 'Active', 5);
 
 -- --------------------------------------------------------
 
@@ -397,7 +403,7 @@ CREATE TABLE `prescription_records` (
   `unit` int(10) NOT NULL,
   `dosage` varchar(25) NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `prescription_records`
@@ -421,7 +427,7 @@ CREATE TABLE `room` (
   `noofbeds` int(10) NOT NULL,
   `room_tariff` float(10,2) NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `room`
@@ -446,7 +452,7 @@ CREATE TABLE `service_type` (
   `servicecharge` float(10,2) NOT NULL,
   `description` text NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `service_type`
@@ -471,7 +477,7 @@ CREATE TABLE `treatment` (
   `treatment_cost` decimal(10,2) NOT NULL,
   `note` text NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `treatment`
@@ -510,17 +516,18 @@ CREATE TABLE `treatment_records` (
   `treatment_date` date NOT NULL,
   `treatment_time` time NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `treatment_records`
 --
 
 INSERT INTO `treatment_records` (`treatment_records_id`, `treatmentid`, `appointmentid`, `patientid`, `doctorid`, `treatment_description`, `uploads`, `treatment_date`, `treatment_time`, `status`) VALUES
-(1, 20, 1, 1, 1, 'Fever \r\ntake paracitamol', '1746614148', '2019-06-15', '17:00:00', 'Active'),
-(2, 20, 2, 3, 2, 'Demo Treatment Description...', '20245sample_image.jpg', '2021-06-24', '18:24:00', 'Active'),
-(3, 20, 4, 5, 5, 'to study the morphology of blood and blood-forming tissues', '853sample_image.jpg', '2021-06-24', '16:40:00', 'Active'),
-(4, 33, 5, 6, 7, 'based on small cell lung cancer', '25208sample_image.jpg', '2021-06-24', '15:22:00', 'Active');
+(1, 20, 1, 1, 1, 'Fever,\ntake paracitamol', '1700948653xray-film-reading-made-easy.pdf', '2023-04-11', '17:00:00', 'Active'),
+(2, 20, 2, 3, 2, 'Dycentry,Take Amodis', '1700948653xray-film-reading-made-easy.pdf', '2023-06-13', '18:24:00', 'Active'),
+(3, 20, 4, 5, 5, 'to study the morphology of blood and blood-forming tissues', '1700948653xray-film-reading-made-easy.pdf', '2023-01-24', '16:40:00', 'Active'),
+(4, 33, 5, 6, 7, 'based on small cell lung cancer', '1700948653xray-film-reading-made-easy.pdf', '2023-03-18', '15:22:00', 'Active'),
+(5, 22, 1, 1, 1, 'X-Ray', '1700948653xray-film-reading-made-easy.pdf', '2023-06-17', '03:39:00', 'Active');
 
 -- --------------------------------------------------------
 
@@ -535,15 +542,8 @@ CREATE TABLE `user` (
   `patientname` varchar(50) NOT NULL,
   `mobileno` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `createddateandtime` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userid`, `loginname`, `password`, `patientname`, `mobileno`, `email`, `createddateandtime`) VALUES
-(1, 'admin', 'admin', 'admin', '', '', '2017-12-14 11:21:45');
+  `createddateandtime` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Indexes for dumped tables
@@ -668,91 +668,110 @@ ALTER TABLE `user`
 --
 ALTER TABLE `admin`
   MODIFY `adminid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `appointmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `billing`
 --
 ALTER TABLE `billing`
-  MODIFY `billingid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `billingid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `billing_records`
 --
 ALTER TABLE `billing_records`
-  MODIFY `billingservice_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `billingservice_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `department`
 --
 ALTER TABLE `department`
   MODIFY `departmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
   MODIFY `doctorid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `doctor_timings`
 --
 ALTER TABLE `doctor_timings`
   MODIFY `doctor_timings_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
 --
 -- AUTO_INCREMENT for table `medicine`
 --
 ALTER TABLE `medicine`
   MODIFY `medicineid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `orderid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `patientid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
   MODIFY `paymentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `prescription`
 --
 ALTER TABLE `prescription`
   MODIFY `prescriptionid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `prescription_records`
 --
 ALTER TABLE `prescription_records`
-  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `prescription_record_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
   MODIFY `roomid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
 -- AUTO_INCREMENT for table `service_type`
 --
 ALTER TABLE `service_type`
   MODIFY `service_type_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `treatment`
 --
 ALTER TABLE `treatment`
   MODIFY `treatmentid` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
 --
 -- AUTO_INCREMENT for table `treatment_records`
 --
 ALTER TABLE `treatment_records`
-  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `treatment_records_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,4 @@
+"paymentid","patientid","appointmentid","paiddate","paidtime","paidamount","status","cardholder","cardnumber","cvvno","expdate"
+"1","5","4","2023-06-24","19:26:51","400.00","Active","Mehedi Hasan","2147483647","156","0000-00-00"
+"2","6","5","2023-06-24","19:54:23","6379.80","Active","Morzina Akter","2147483647","985","0000-00-00"
+"3","3","2","2023-06-24","19:56:33","372.75","Active","Riaz Sarker","2147483647","475","0000-00-00"

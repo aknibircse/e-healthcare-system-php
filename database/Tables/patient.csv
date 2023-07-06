@@ -1,0 +1,8 @@
+"patientid","patientname","admissiondate","admissiontime","address","mobileno","method","pincode","loginid","password","bloodgroup","gender","dob","status"
+"1","Johny Mia","2023-04-15","18:47:22","Sukrabad, Dhanmondi, Dhaka","01796345893","Offline","1214","johny","12345678","O+","MALE","1990-01-01","Active"
+"3","Riaz Sarker","2023-01-24","14:38:04","Bosila, Mohammadpur, Dhaka","01796348536","Online","1207","riaz","12345678","A-","MALE","1992-02-12","Active"
+"4","Jakia Sultana","2023-02-24","15:26:32","Birulia, Savar, Dhaka","01796734893","Offline","1340","jakia","12345678","B+","FEMALE","1995-02-02","Active"
+"5","Mehedi Hasan","2023-03-24","18:44:22","Saptana Bazar, Bahadurmore, Lalmonirhat","01797624893","Online","5500","mehedi","12345678","AB+","MALE","1992-03-12","Active"
+"6","Morzina Akter","2023-06-24","19:34:27","Khagan Bazar, Ashulia, Dhaka","01796456893","Online","1342","morzina","12345678","AB-","FEMALE","1994-03-12","Active"
+"7","MH Hridoy","2023-05-18","19:58:39","Dattapara, Birulia, Dhaka","01796345893","Online","1341","hridoy","12345678","A-","MALE","2023-05-01","Active"
+"8","Masud Rana","2023-05-17","03:53:36","Link Road, Firmgate, Dhaka","01797892893","Offline","1205","masud","12345678","O-","MALE","2023-05-05","Active"
