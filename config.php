@@ -5,3 +5,5 @@ $db_pass "cedb38e8";
 $db_name ="heroku_0129eeda404b89b";
 
 $connect =mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die ("Database Connection Error.!!");
+
+?>
