@@ -1,3 +1,4 @@
+<?php include 'config.php';?>
 <?php include 'header.php';?>
   <!-- Bnr Header -->
   <section class="main-banner">
